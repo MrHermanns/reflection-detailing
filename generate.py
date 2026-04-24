@@ -35,7 +35,9 @@ def common_head(title, description, canonical_path, og_title=None, keywords=""):
 <meta property="og:title" content="{og_title or title}" />
 <meta property="og:description" content="{description}" />
 <meta property="og:url" content="{canonical}" />
-<meta property="og:image" content="{BASE_URL}/photos/4runner-exterior-after.jpg?v=3" />
+<meta property="og:image" content="{BASE_URL}/brand/banner-4runner.jpg?v=4" />
+<meta property="og:image:width" content="1920" />
+<meta property="og:image:height" content="600" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='19' fill='%23f59e0b'/%3E%3Cpath d='M13 29 V11 h8.5 a5 5 0 0 1 0 10 H17 l6 8 h-4 l-6-8 Z' fill='%230f172a'/%3E%3Ccircle cx='29' cy='13' r='2.2' fill='%23fff' opacity='.85'/%3E%3C/svg%3E" />
 <script src="https://cdn.tailwindcss.com"></script>
@@ -57,7 +59,7 @@ def local_business_schema():
   "@type": "AutoDetailing",
   "name": "Reflection Detailing",
   "description": "Mobile auto detailing service in Chula Vista, CA. IGL Coatings Certified and HTL Detailing Certified. Ceramic coating, paint correction, headlight restoration, and full interior and exterior detailing.",
-  "image": "https://mrhermanns.github.io/reflection-detailing/photos/4runner-exterior-after.jpg?v=3",
+  "image": "https://mrhermanns.github.io/reflection-detailing/brand/banner-4runner.jpg?v=4",
   "url": "https://mrhermanns.github.io/reflection-detailing/",
   "telephone": "+1-619-341-0016",
   "priceRange": "$$",
