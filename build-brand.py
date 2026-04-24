@@ -293,6 +293,121 @@ def make_banner(photo_rel: str, out_path: str, headline="REFLECTION DETAILING",
     print(f"✓ {out_path}")
 
 
+# ---------- APPLE TOUCH ICON (180x180, no transparency) ----------
+
+def make_apple_touch_icon(path: str):
+    """180x180 iOS home screen icon — solid ink background with amber R circle centered."""
+    size = 180
+    img = Image.new("RGB", (size, size), INK)
+    d = ImageDraw.Draw(img)
+
+    # Amber circle filling most of the square (iOS auto-rounds corners)
+    pad = int(size * 0.08)
+    d.ellipse((pad, pad, size - pad, size - pad), fill=ACCENT)
+
+    # Bold R
+    font = ImageFont.truetype(ARIAL_BLACK, int(size * 0.55))
+    bbox = d.textbbox((0, 0), "R", font=font)
+    tw = bbox[2] - bbox[0]
+    th = bbox[3] - bbox[1]
+    d.text(
+        ((size - tw) / 2 - bbox[0], (size - th) / 2 - bbox[1] - size * 0.03),
+        "R",
+        font=font,
+        fill=INK,
+    )
+
+    # Shine dot
+    sd_size = max(size // 14, 6)
+    sx = int(size * 0.70)
+    sy = int(size * 0.28)
+    d.ellipse(
+        (sx - sd_size, sy - sd_size, sx + sd_size, sy + sd_size),
+        fill=WHITE,
+    )
+
+    img.save(path, "PNG", optimize=True)
+    print(f"✓ {path}")
+
+
+# ---------- TWITTER CARD (1200x628, Twitter's spec) ----------
+
+def make_twitter_card(photo_rel: str, out_path: str):
+    """1200x628 (1.91:1) — Twitter's recommended summary_large_image ratio.
+    Also safe for Open Graph fallbacks on platforms that prefer this ratio.
+    """
+    W, H = 1200, 628
+
+    photo = Image.open(os.path.join(HERE, photo_rel)).convert("RGB")
+    pw, ph = photo.size
+    ratio = max(W / pw, H / ph)
+    new_w, new_h = int(pw * ratio), int(ph * ratio)
+    photo = photo.resize((new_w, new_h), Image.LANCZOS)
+    left = (new_w - W) // 2
+    top = (new_h - H) // 2
+    photo = photo.crop((left, top, left + W, top + H))
+
+    card = photo.copy().convert("RGBA")
+
+    # Dark overlay — slightly heavier at bottom for text legibility
+    overlay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    od = ImageDraw.Draw(overlay)
+    for y in range(H):
+        t = y / H
+        a = int(60 + 180 * t)  # top lighter, bottom darker
+        od.line([(0, y), (W, y)], fill=(15, 23, 42, a))
+    card = Image.alpha_composite(card, overlay)
+
+    d = ImageDraw.Draw(card)
+
+    # Amber accent bars
+    d.rectangle((0, 0, W, 10), fill=ACCENT)
+    d.rectangle((0, H - 10, W, H), fill=ACCENT)
+
+    # Logo badge — left, bottom half
+    pad = 70
+    circle_size = 110
+    circle_x = pad
+    circle_y = H - circle_size - pad - 100
+    d.ellipse((circle_x, circle_y, circle_x + circle_size, circle_y + circle_size), fill=ACCENT)
+    r_font = ImageFont.truetype(ARIAL_BLACK, int(circle_size * 0.65))
+    bbox = d.textbbox((0, 0), "R", font=r_font)
+    d.text(
+        (circle_x + circle_size / 2 - (bbox[2] - bbox[0]) / 2 - bbox[0],
+         circle_y + circle_size / 2 - (bbox[3] - bbox[1]) / 2 - bbox[1] - circle_size * 0.03),
+        "R", font=r_font, fill=INK,
+    )
+    sd = circle_size // 12
+    d.ellipse(
+        (circle_x + int(circle_size * 0.72) - sd, circle_y + int(circle_size * 0.28) - sd,
+         circle_x + int(circle_size * 0.72) + sd, circle_y + int(circle_size * 0.28) + sd),
+        fill=(255, 255, 255, 230),
+    )
+
+    # Headline next to logo — "REFLECTION DETAILING"
+    text_x = circle_x + circle_size + 28
+    text_y = circle_y + 8
+    headline_font = ImageFont.truetype(ARIAL_BLACK, 58)
+    d.text((text_x, text_y), "REFLECTION DETAILING", font=headline_font, fill=WHITE)
+
+    # Tagline
+    tag_font = ImageFont.truetype(ARIAL_BOLD, 26)
+    d.text((text_x, text_y + 74), "Mobile Auto Detailing  ·  Chula Vista, CA", font=tag_font, fill=ACCENT)
+
+    # Bottom strip with certs + phone
+    strip_font = ImageFont.truetype(ARIAL_BOLD, 22)
+    strip_y = H - 55
+    d.text((pad, strip_y), "IGL COATINGS CERTIFIED  ·  HTL DETAILING CERTIFIED", font=strip_font, fill=SLATE300)
+    phone_font = ImageFont.truetype(ARIAL_BLACK, 32)
+    phone = "(619) 341-0016"
+    bbox = d.textbbox((0, 0), phone, font=phone_font)
+    phone_w = bbox[2] - bbox[0]
+    d.text((W - phone_w - pad, strip_y - 4), phone, font=phone_font, fill=WHITE)
+
+    card.convert("RGB").save(out_path, "JPEG", quality=88, optimize=True)
+    print(f"✓ {out_path}")
+
+
 if __name__ == "__main__":
     make_profile_logo(512, os.path.join(OUT, "logo-512.png"))
     make_profile_logo(1024, os.path.join(OUT, "logo-1024.png"))
@@ -303,4 +418,6 @@ if __name__ == "__main__":
         os.path.join(OUT, "banner-angel.jpg"),
         gradient="top",
     )
+    make_apple_touch_icon(os.path.join(OUT, "apple-touch-icon.png"))
+    make_twitter_card("photos/4runner-exterior-after.jpg", os.path.join(OUT, "twitter-card.jpg"))
     print("\nAll brand assets generated.")
