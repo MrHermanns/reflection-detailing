@@ -176,6 +176,10 @@ def footer_html(depth=1):
         <li><a href="{rel}eastlake/" class="hover:text-accent">Eastlake</a></li>
         <li><a href="{rel}bonita/" class="hover:text-accent">Bonita</a></li>
         <li><a href="{rel}otay-ranch/" class="hover:text-accent">Otay Ranch</a></li>
+        <li><a href="{rel}coronado/" class="hover:text-accent">Coronado</a></li>
+        <li><a href="{rel}national-city/" class="hover:text-accent">National City</a></li>
+        <li><a href="{rel}imperial-beach/" class="hover:text-accent">Imperial Beach</a></li>
+        <li><a href="{rel}san-diego/" class="hover:text-accent">San Diego</a></li>
       </ul>
     </div>
     <div>
@@ -242,6 +246,10 @@ SERVICE_PAGES = [
              "A full coating job with paint correction takes 6-8 hours on-site. We start early and work through the day."),
         ],
         "also_see": [("paint-correction", "Paint Correction"), ("mobile-detailing", "Mobile Detailing"), ("headlight-restoration", "Headlight Restoration")],
+        "photos": [
+            ("photos/4runner-exterior-after.jpg?v=3", "Toyota 4Runner with deep metallic blue gloss after ceramic coating in Chula Vista", "Coated finish on a 4Runner"),
+            ("photos/wheel-after.jpg?v=3", "Clean polished wheel after ceramic coating protection", "Ceramic-protected wheel"),
+        ],
     },
     {
         "slug": "paint-correction",
@@ -285,6 +293,10 @@ SERVICE_PAGES = [
              "Compound is more abrasive — it cuts deeper to remove heavier defects. Polish is finer — it refines and adds gloss. A 2-step uses both in sequence."),
         ],
         "also_see": [("ceramic-coating", "Ceramic Coating"), ("mobile-detailing", "Mobile Detailing"), ("headlight-restoration", "Headlight Restoration")],
+        "photos": [
+            ("photos/accord-paint-headlight-before.jpg?v=3", "Honda Accord before paint correction — oxidized paint and cloudy headlight", "BEFORE paint correction"),
+            ("photos/accord-paint-headlight-after.jpg?v=3", "Same Honda Accord after paint correction — restored gloss and clear headlights", "AFTER paint correction"),
+        ],
     },
     {
         "slug": "mobile-detailing",
@@ -326,6 +338,10 @@ SERVICE_PAGES = [
              "Absolutely. We drop by your office parking lot, text you when done, and you come out to a detailed car."),
         ],
         "also_see": [("ceramic-coating", "Ceramic Coating"), ("paint-correction", "Paint Correction"), ("interior-detail", "Interior Detail")],
+        "photos": [
+            ("photos/angel-mustang-foam-wash.jpg?v=3", "Angel, owner of Reflection Detailing, foam-washing a Mustang in Chula Vista", "Angel on-site with a customer's Mustang"),
+            ("photos/4runner-exterior-after.jpg?v=3", "Finished 4Runner exterior detail in Chula Vista", "Finished result — brought to your driveway"),
+        ],
     },
     {
         "slug": "headlight-restoration",
@@ -365,6 +381,10 @@ SERVICE_PAGES = [
              "Clear headlights won't affect smog. They will help pass any visibility-related inspection."),
         ],
         "also_see": [("mobile-detailing", "Mobile Detailing"), ("paint-correction", "Paint Correction"), ("ceramic-coating", "Ceramic Coating")],
+        "photos": [
+            ("photos/accord-paint-headlight-before.jpg?v=3", "Honda Accord with oxidized, cloudy headlights before restoration", "BEFORE — cloudy headlights"),
+            ("photos/accord-paint-headlight-after.jpg?v=3", "Same Honda Accord after headlight restoration — clear and UV-sealed", "AFTER — clear and UV-sealed"),
+        ],
     },
     {
         "slug": "interior-detail",
@@ -405,6 +425,10 @@ SERVICE_PAGES = [
              "We clean around them. If you want them removed for deeper access, it's a $29 add-on — we uninstall, clean, and reinstall properly."),
         ],
         "also_see": [("mobile-detailing", "Mobile Detailing"), ("paint-correction", "Paint Correction"), ("ceramic-coating", "Ceramic Coating")],
+        "photos": [
+            ("photos/interior-seats-before.jpg?v=3", "Honda Accord back seats before interior detail — debris and stains", "BEFORE — interior seats"),
+            ("photos/interior-seats-after.jpg?v=3", "Same Honda Accord back seats after full interior detail — spotless", "AFTER — interior seats"),
+        ],
     },
 ]
 
@@ -484,6 +508,82 @@ CITY_PAGES = [
         ],
         "popular_services": ["The Works — Interior + Exterior", "Monthly Maintenance Plan", "Interior Detail (pet hair + stains)"],
     },
+    {
+        "slug": "coronado",
+        "name": "Coronado",
+        "zips": "92118",
+        "neighborhoods": ["Coronado Village", "Coronado Cays", "Coronado Shores", "Coronado Cove"],
+        "lat": 32.6859,
+        "lng": -117.1831,
+        "h1": "Mobile Auto Detailing in Coronado, CA",
+        "description": "Mobile auto detailing in Coronado. Luxury and exotic experience. IGL Coatings Certified. Coastal salt-air decontamination. From $89. (619) 341-0016.",
+        "keywords": "coronado mobile detailing, coronado car detailer, ceramic coating coronado, luxury detailer coronado",
+        "intro": "Coronado vehicles take serious abuse from the ocean air. Salt spray, sand, and sun are hard on paint and wheels — and Coronado owners tend to drive vehicles worth protecting. We bring a fully self-contained mobile rig across the bridge so your Coronado Shores condo, Coronado Cays home, or Village residence stays the service location. Every Coronado exterior detail includes extra iron decontamination to pull embedded salt deposits out of the clear coat.",
+        "local_seo": [
+            "Extra iron + salt decontamination standard on every Coronado exterior service.",
+            "Ceramic coating strongly recommended for Coronado vehicles — UV + salt exposure is brutal otherwise.",
+            "Service across Coronado Village, Coronado Cays, Coronado Shores, and the Coronado Cove area.",
+            "Comfortable with Coronado Cays gated-community access and condo parking garages.",
+        ],
+        "popular_services": ["Ceramic Coating (5-year + 9-year)", "Exterior Detail with extra decon", "Paint Correction"],
+    },
+    {
+        "slug": "national-city",
+        "name": "National City",
+        "zips": "91950",
+        "neighborhoods": ["Kimball Park area", "Plaza Bonita area", "Paradise Valley", "Granger"],
+        "lat": 32.6781,
+        "lng": -117.0992,
+        "h1": "Mobile Auto Detailing in National City, CA",
+        "description": "Affordable mobile auto detailing in National City. No travel fee. Full Detail from $279, Mini from $89. Fleet accounts welcome. (619) 341-0016.",
+        "keywords": "national city mobile detailing, national city car detailer, fleet detailing national city, 91950 auto detailing",
+        "intro": "National City is a regular stop on our route — busy residential streets, dense apartment complexes, and several small-fleet accounts (contractors, delivery services, auto dealers). We handle one-off details and recurring monthly maintenance in National City with the same quality. Self-contained mobile rig means we service vehicles where they sit — no need to move anything to a shop.",
+        "local_seo": [
+            "Familiar with National City apartment complexes, condos, and street parking scenarios.",
+            "Fleet-friendly — we offer volume pricing for 3+ vehicles per visit.",
+            "Zip 91950 served at no travel fee.",
+            "Popular in National City: Mini Detail for daily drivers; Full Detail before resale.",
+        ],
+        "popular_services": ["Mini Detail", "Full Detail (pre-sale clean-up)", "Monthly Maintenance Plan", "Fleet detailing (3+ vehicles)"],
+    },
+    {
+        "slug": "imperial-beach",
+        "name": "Imperial Beach",
+        "zips": "91932",
+        "neighborhoods": ["Seacoast Drive area", "Palm Avenue corridor", "Downtown IB"],
+        "lat": 32.5839,
+        "lng": -117.1133,
+        "h1": "Mobile Auto Detailing in Imperial Beach, CA",
+        "description": "Mobile auto detailing in Imperial Beach. Coastal-grade decontamination and salt protection. IGL Coatings Certified. From $89. (619) 341-0016.",
+        "keywords": "imperial beach mobile detailing, IB car detailer, ceramic coating imperial beach, coastal car detailer",
+        "intro": "Imperial Beach vehicles live on the front lines of salt, sand, and sun. Paint oxidizes faster here than almost anywhere in the county. Our mobile service brings full coastal-grade decontamination right to your driveway in IB — iron removal, tar decon, clay bar, and optional IGL ceramic coating to block the damage from ever starting. We serve Seacoast Drive, Palm Avenue, and the Downtown IB area.",
+        "local_seo": [
+            "Every Imperial Beach exterior service includes extended iron + salt decontamination.",
+            "Ceramic coating is the single best investment for IB vehicles — 5-year IGL coating blocks 90%+ of UV/salt damage.",
+            "Zip 91932 served at no travel fee.",
+            "Popular: Full Exterior with coastal decon + Ceramic Coating for long-term protection.",
+        ],
+        "popular_services": ["Full Exterior with coastal decon", "Ceramic Coating (IGL 5-year)", "Paint Correction"],
+    },
+    {
+        "slug": "san-diego",
+        "name": "San Diego",
+        "zips": "Multiple (92101, 92103, 92104, 92105, 92108, 92116, 92129, etc.)",
+        "neighborhoods": ["Mission Valley", "North Park", "Downtown San Diego", "Hillcrest", "Kearny Mesa", "Clairemont", "Pacific Beach"],
+        "lat": 32.7157,
+        "lng": -117.1611,
+        "h1": "Mobile Auto Detailing in San Diego, CA",
+        "description": "Mobile auto detailing across San Diego — Mission Valley, North Park, Downtown, Hillcrest, and more. IGL Coatings Certified. Self-contained. From $89.",
+        "keywords": "san diego mobile detailing, mobile car detailing san diego, mission valley detailer, north park detailing, downtown san diego detailer",
+        "intro": "We extend our mobile service from Chula Vista up into San Diego proper — Mission Valley offices, North Park homes, Downtown condos, Hillcrest residences, and beyond. The 805 and 5 corridors are regular drives for us. Every San Diego appointment gets the same fully self-contained rig, the same IGL + HTL certifications, and the same satisfaction guarantee. Metered street parking, condo garages, and office lots are all workable — we coordinate with you at booking.",
+        "local_seo": [
+            "Regular coverage: Mission Valley, North Park, Downtown SD, Hillcrest, Kearny Mesa, Clairemont, Pacific Beach.",
+            "Experienced with condo/garage parking and metered street setups — we plan around space.",
+            "Office-lot bookings welcome — you work, we detail, you come out to a finished car.",
+            "Same South Bay pricing applies in San Diego at no travel fee.",
+        ],
+        "popular_services": ["The Works — Interior + Exterior", "Ceramic Coating", "Paint Correction"],
+    },
 ]
 
 
@@ -522,6 +622,18 @@ def render_service_page(data):
         f'<div class="border border-slate-200 rounded-xl p-5"><h3 class="font-bold mb-2">{t}</h3><p class="text-slate-600 text-sm">{d}</p></div>'
         for t, d in data["benefits"]
     )
+    photos_html = ""
+    if data.get("photos"):
+        tiles = "\n".join(
+            f'<figure class="relative"><img src="../{src}" alt="{alt}" class="rounded-xl w-full h-72 md:h-96 object-cover" loading="lazy" /><figcaption class="absolute bottom-3 left-3 bg-ink/90 text-white text-xs font-bold px-3 py-1 rounded">{caption}</figcaption></figure>'
+            for src, alt, caption in data["photos"]
+        )
+        photos_html = f"""
+  <section class="mb-16">
+    <h2 class="text-2xl md:text-3xl font-black mb-6">Recent {data['name'].lower()} work</h2>
+    <div class="grid md:grid-cols-2 gap-5">{tiles}</div>
+  </section>
+"""
     process_html = "\n".join(
         f'<li class="border border-slate-200 rounded-xl p-5"><div class="w-10 h-10 bg-accent text-ink rounded-full grid place-items-center font-black mb-3">{i+1}</div><h3 class="font-bold mb-2">{t}</h3><p class="text-slate-600 text-sm">{d}</p></li>'
         for i, (t, d) in enumerate(data["process"])
@@ -581,6 +693,7 @@ def render_service_page(data):
     <h2 class="text-2xl md:text-3xl font-black mb-6">Our {data['name']} Process</h2>
     <ol class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">{process_html}</ol>
   </section>
+  {photos_html}
 
   <section class="mb-16" id="pricing">
     <h2 class="text-2xl md:text-3xl font-black mb-6">{data['name']} Pricing</h2>
@@ -828,6 +941,37 @@ def render_learn_hub():
              ("4. Cloudy or yellow headlights", "Oxidation on the outer plastic cuts light output by up to 80%. That's a safety issue. Headlight restoration takes 45 minutes and costs $99 per pair."),
              ("5. The last time you detailed was over a year ago", "Cars collect bonded contaminants over time — brake dust, rail dust, tree sap, bug splatter — that regular washing won't remove. An annual full detail with decontamination keeps paint healthy for the long haul."),
          ]),
+        ("ceramic-coating-maintenance-guide", "How to Maintain a Ceramic Coating: 2026 Guide",
+         "Your IGL-certified installer's guide to making a ceramic coating last its full rated lifespan.",
+         [
+             ("The first 7 days are the most important", "A ceramic coating needs 5-7 days to fully cure after application. During that window: no car washes, no rain if you can help it, no parking under trees. After 7 days, the coating is bonded and durable — you can wash normally."),
+             ("Use the 2-bucket wash method (or a touchless wash)", "The #1 thing that damages coated paint isn't UV or salt — it's improper washing. Automatic car washes with rotating brushes introduce micro-scratches that dull the coating's slickness. Either hand-wash with two buckets (one soapy, one rinse), a clean microfiber mitt, and a grit guard — or use a touchless automatic wash only."),
+             ("Use a pH-neutral shampoo", "Dish soap, household cleaners, and aggressive car wash shampoos can strip a ceramic coating over time. Use a pH-neutral car shampoo labeled 'coating-safe.' Meguiar's Gold Class, Chemical Guys Mr. Pink, and Gyeon Bathe are all fine choices."),
+             ("Dry with a clean microfiber or blower", "Water spots are the enemy of coated paint. Don't let coated paint air-dry — either blow-dry with a leaf blower (seriously, this works great) or dry with a clean, fluffy microfiber towel using the 'drag technique.'"),
+             ("Apply a spray sealant boost every 3-6 months", "A maintenance spray like IGL Quartz+, Gyeon WetCoat, or CarPro Reload adds sacrificial protection on top of the ceramic coating. This doesn't replace the coating — it extends the effective lifespan by protecting it from environmental damage."),
+             ("Schedule an annual maintenance inspection", "Come back to your installer once a year for a coating inspection. We check for high spots, reduced slickness, or damage, and decant a maintenance spray. For IGL-certified coatings with registered warranties, this annual check keeps the warranty valid."),
+         ]),
+        ("ppf-vs-ceramic-coating", "PPF vs Ceramic Coating: Which Does Your Car Actually Need?",
+         "Both protect paint. Both cost money. They do different things. Here's the honest breakdown.",
+         [
+             ("Short version", "PPF (paint protection film) is a thick self-healing urethane film that physically blocks rock chips. Ceramic coating is a liquid chemistry that blocks UV, chemical, and staining damage. You can run both — PPF on the front impact zones and ceramic on everything else is the gold-standard setup."),
+             ("What PPF is good for", "Rock chips, road debris, bug-etch damage, and minor scratches — PPF takes the hit instead of your paint. Modern PPF self-heals minor scratches with heat. Best for daily drivers with long commutes, lifted trucks, anything driven on dirt roads, collector cars you want to sell in 10 years with zero chips."),
+             ("What ceramic coating is good for", "UV fading, chemical etching (bird droppings, tree sap, bug splatter), water spots, staining, and everyday swirl resistance. Ceramic keeps paint looking 'wet' and makes washing dramatically easier. Best for preserving a fresh paint job, maintaining resale value, and saving time on maintenance."),
+             ("What they won't do", "Ceramic coating is NOT scratch-proof. It resists minor swirls but a shopping cart will still scratch your paint through the coating. PPF is NOT bulletproof either — hard enough impacts can still damage paint underneath. Both are protection, not armor."),
+             ("Cost comparison", "PPF full-front (hood, fenders, bumper, mirrors, headlights): $1,500-$2,500. PPF full-car: $4,500-$9,000. Ceramic Coating: $449-$1,499 depending on tier. Ceramic is massively cheaper but covers different risks."),
+             ("Our recommendation", "For most South Bay daily drivers: start with a 5-year IGL ceramic coating. Add PPF to the front impact zones (hood, front bumper, fenders) if you park outside often or commute on freeways with road debris. That combination gives 80%+ of full-car PPF protection at roughly 30% of the cost."),
+         ]),
+        ("how-often-should-you-detail-car-san-diego", "How Often Should You Detail Your Car in San Diego?",
+         "Frequency recommendations by service type, driving habits, and where you park.",
+         [
+             ("Mini Detail — every 4-6 weeks", "A Mini Detail (hand wash, vacuum, windows, tire dressing) is a maintenance touch, not a deep clean. For daily drivers, bi-monthly keeps the car looking sharp without much effort. Go monthly if you park outside or drive frequently."),
+             ("Full Interior Detail — every 3-6 months", "Interior grime builds slowly but steadily — seat stains, dashboard dust, carpet tracks. A Full Interior Detail every 3-6 months resets the clock. More frequent if you have kids, pets, or commute long distances."),
+             ("Full Exterior Detail — every 3-4 months", "Exterior paint accumulates bonded contaminants (rail dust, iron, tar, bug splatter) that regular washing won't remove. Every 3-4 months is the sweet spot for a full exterior with decontamination."),
+             ("Paint Correction — once, then every 2-5 years", "Paint correction is a one-and-done reset. Once done, proper maintenance should extend the results for years. Most owners do a fresh correction every 2-5 years as swirls accumulate."),
+             ("Ceramic Coating — every 2-9 years (depending on tier)", "Match the ceramic tier to your ownership timeline. Keeping the car 2-3 years? A 2-year IGL coating at $449 is perfect. 5+ years? Go 5-year IGL at $849. Long-haul? 9-year IGL at $1,499."),
+             ("Headlight Restoration — every 1-3 years", "If you live and park in the San Diego sun, plastic headlights oxidize faster than you'd think. Every 1-3 years with a UV sealer keeps them clear. Garaged cars go longer."),
+             ("Adjust for how you park", "Garaged daily: everything gets the longer end of the range. Parked outside, frequent freeway driving, or coastal (IB/Coronado): everything gets the shorter end. Salt air and UV age paint 2-3x faster than sheltered storage."),
+         ]),
     ]
 
     # Hub page
@@ -946,11 +1090,18 @@ def render_sitemap():
         ("eastlake/", 0.8),
         ("bonita/", 0.8),
         ("otay-ranch/", 0.8),
+        ("coronado/", 0.8),
+        ("national-city/", 0.7),
+        ("imperial-beach/", 0.7),
+        ("san-diego/", 0.8),
         ("pricing/", 0.8),
         ("learn/", 0.7),
         ("learn/wax-vs-ceramic-coating/", 0.6),
         ("learn/how-much-does-detailing-cost-san-diego/", 0.6),
         ("learn/5-signs-your-car-needs-detailing/", 0.6),
+        ("learn/ceramic-coating-maintenance-guide/", 0.6),
+        ("learn/ppf-vs-ceramic-coating/", 0.6),
+        ("learn/how-often-should-you-detail-car-san-diego/", 0.6),
     ]
     entries = "\n".join(
         f'  <url><loc>{BASE_URL}/{p}</loc><lastmod>2026-04-24</lastmod><priority>{pr}</priority></url>'
@@ -1023,6 +1174,18 @@ SUVs add $40. Full-size trucks and vans add $60-$80. 3-row vehicles add $80-$100
 - [Eastlake]({BASE_URL}/eastlake/): Eastlake coverage
 - [Bonita]({BASE_URL}/bonita/): Bonita coverage
 - [Otay Ranch]({BASE_URL}/otay-ranch/): Otay Ranch coverage
+- [Coronado]({BASE_URL}/coronado/): Coronado coverage — luxury/beach area
+- [National City]({BASE_URL}/national-city/): National City + fleet accounts
+- [Imperial Beach]({BASE_URL}/imperial-beach/): Imperial Beach — coastal decon
+- [San Diego]({BASE_URL}/san-diego/): Mission Valley, North Park, Downtown, Hillcrest
+
+## Detailing guides
+- [Wax vs Ceramic Coating]({BASE_URL}/learn/wax-vs-ceramic-coating/)
+- [Detailing prices in San Diego]({BASE_URL}/learn/how-much-does-detailing-cost-san-diego/)
+- [5 signs your car needs detailing]({BASE_URL}/learn/5-signs-your-car-needs-detailing/)
+- [Ceramic coating maintenance guide]({BASE_URL}/learn/ceramic-coating-maintenance-guide/)
+- [PPF vs Ceramic Coating]({BASE_URL}/learn/ppf-vs-ceramic-coating/)
+- [How often to detail in San Diego]({BASE_URL}/learn/how-often-should-you-detail-car-san-diego/)
 
 ## Frequently asked
 - How much does mobile detailing cost in Chula Vista? Mini Detail starts at $89, Full Detail $279, Ceramic Coating from $449.
