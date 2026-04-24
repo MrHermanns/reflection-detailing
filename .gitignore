@@ -1,0 +1,9 @@
+node_modules/
+package.json
+package-lock.json
+build-doc.js
+IMG_*.PNG
+IMG_*.jpeg
+IMG_*.jpg
+*.docx
+.DS_Store

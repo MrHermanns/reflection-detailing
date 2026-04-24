@@ -163,9 +163,8 @@
   html { scroll-behavior: smooth; }
   .hero-bg {
     background:
-      radial-gradient(ellipse at 30% 20%, rgba(245,158,11,.14), transparent 60%),
-      radial-gradient(ellipse at 80% 80%, rgba(99,102,241,.14), transparent 60%),
-      linear-gradient(180deg, #0f172a 0%, #020617 100%);
+      linear-gradient(rgba(15,23,42,.82), rgba(2,6,23,.86)),
+      url('photos/4runner-exterior-after.jpg') center/cover no-repeat;
   }
   .placeholder {
     background:
@@ -437,36 +436,79 @@
       <p class="text-slate-600 mt-3">Recent details across Chula Vista and South San Diego.</p>
     </div>
 
-    <!-- Placeholders — replace each with Angel's real before/after photos (~600x400 or 3:2). -->
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-      <div class="placeholder rounded-xl w-full h-48 md:h-64" role="img" aria-label="Paint correction before and after placeholder">
-        <span class="label">PAINT CORRECTION</span>
-        <span class="sub">Your before/after here</span>
+    <!-- Real before/after pairs from recent Reflection Detailing jobs in Chula Vista, CA. -->
+    <div class="space-y-10">
+
+      <!-- Pair 1: Paint + Headlight Restoration (Red Honda Accord) -->
+      <div>
+        <h3 class="text-lg font-bold mb-3 text-slate-700">Paint Decontamination + Headlight Restoration <span class="text-slate-500 font-normal">— Honda Accord, Chula Vista</span></h3>
+        <div class="grid grid-cols-2 gap-4">
+          <figure class="relative">
+            <img src="photos/accord-paint-headlight-before.jpg" alt="Honda Accord before paint restoration, showing oxidized headlights and dusty red paint" class="rounded-xl w-full h-64 md:h-80 object-cover" loading="lazy" />
+            <figcaption class="absolute top-3 left-3 bg-ink/90 text-white text-xs font-black uppercase px-3 py-1 rounded">Before</figcaption>
+          </figure>
+          <figure class="relative">
+            <img src="photos/accord-paint-headlight-after.jpg" alt="Same Honda Accord after paint correction and headlight restoration — deep red shine and crystal-clear headlights" class="rounded-xl w-full h-64 md:h-80 object-cover" loading="lazy" />
+            <figcaption class="absolute top-3 left-3 bg-accent text-ink text-xs font-black uppercase px-3 py-1 rounded">After</figcaption>
+          </figure>
+        </div>
       </div>
-      <div class="placeholder rounded-xl w-full h-48 md:h-64" role="img" aria-label="Exterior detail placeholder">
-        <span class="label">EXTERIOR DETAIL</span>
-        <span class="sub">Your photo here</span>
+
+      <!-- Pair 2: Wheel Detail (White Truck) -->
+      <div>
+        <h3 class="text-lg font-bold mb-3 text-slate-700">Wheel & Tire Deep Clean <span class="text-slate-500 font-normal">— Fleet Truck, South Bay</span></h3>
+        <div class="grid grid-cols-2 gap-4">
+          <figure class="relative">
+            <img src="photos/wheel-before.jpg" alt="Fleet truck wheel before cleaning, with heavy brake dust and oxidation" class="rounded-xl w-full h-64 md:h-80 object-cover" loading="lazy" />
+            <figcaption class="absolute top-3 left-3 bg-ink/90 text-white text-xs font-black uppercase px-3 py-1 rounded">Before</figcaption>
+          </figure>
+          <figure class="relative">
+            <img src="photos/wheel-after.jpg" alt="Same truck wheel after deep clean — chrome shining and tire dressed" class="rounded-xl w-full h-64 md:h-80 object-cover" loading="lazy" />
+            <figcaption class="absolute top-3 left-3 bg-accent text-ink text-xs font-black uppercase px-3 py-1 rounded">After</figcaption>
+          </figure>
+        </div>
       </div>
-      <div class="placeholder rounded-xl w-full h-48 md:h-64" role="img" aria-label="Interior detail placeholder">
-        <span class="label">INTERIOR DETAIL</span>
-        <span class="sub">Your photo here</span>
+
+      <!-- Pair 3: Interior Seats (Honda Accord) -->
+      <div>
+        <h3 class="text-lg font-bold mb-3 text-slate-700">Full Interior Detail <span class="text-slate-500 font-normal">— Honda Accord Back Seats</span></h3>
+        <div class="grid grid-cols-2 gap-4">
+          <figure class="relative">
+            <img src="photos/interior-seats-before.jpg" alt="Honda Accord back seats before interior detail, with food crumbs and debris" class="rounded-xl w-full h-64 md:h-80 object-cover" loading="lazy" />
+            <figcaption class="absolute top-3 left-3 bg-ink/90 text-white text-xs font-black uppercase px-3 py-1 rounded">Before</figcaption>
+          </figure>
+          <figure class="relative">
+            <img src="photos/interior-seats-after.jpg" alt="Same Honda Accord back seats after full interior detail — deep vacuum, shampoo, and conditioning" class="rounded-xl w-full h-64 md:h-80 object-cover" loading="lazy" />
+            <figcaption class="absolute top-3 left-3 bg-accent text-ink text-xs font-black uppercase px-3 py-1 rounded">After</figcaption>
+          </figure>
+        </div>
       </div>
-      <div class="placeholder rounded-xl w-full h-48 md:h-64" role="img" aria-label="Ceramic coating placeholder">
-        <span class="label">CERAMIC COATING</span>
-        <span class="sub">Your photo here</span>
+
+      <!-- Pair 4: Trunk / Cargo -->
+      <div>
+        <h3 class="text-lg font-bold mb-3 text-slate-700">Trunk & Cargo Area Reset <span class="text-slate-500 font-normal">— Honda Accord</span></h3>
+        <div class="grid grid-cols-2 gap-4">
+          <figure class="relative">
+            <img src="photos/trunk-before.jpg" alt="Honda Accord trunk before detail, with debris and dust on the liner" class="rounded-xl w-full h-64 md:h-80 object-cover" loading="lazy" />
+            <figcaption class="absolute top-3 left-3 bg-ink/90 text-white text-xs font-black uppercase px-3 py-1 rounded">Before</figcaption>
+          </figure>
+          <figure class="relative">
+            <img src="photos/trunk-after.jpg" alt="Same Honda Accord trunk after detail — clean, vacuumed, and conditioned liner" class="rounded-xl w-full h-64 md:h-80 object-cover" loading="lazy" />
+            <figcaption class="absolute top-3 left-3 bg-accent text-ink text-xs font-black uppercase px-3 py-1 rounded">After</figcaption>
+          </figure>
+        </div>
       </div>
-      <div class="placeholder rounded-xl w-full h-48 md:h-64" role="img" aria-label="Wheel detail placeholder">
-        <span class="label">WHEEL DETAIL</span>
-        <span class="sub">Your photo here</span>
+
+      <!-- Bonus feature shots -->
+      <div>
+        <h3 class="text-lg font-bold mb-3 text-slate-700">Recent Finished Work</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <img src="photos/4runner-exterior-after.jpg" alt="Toyota 4Runner after exterior detail in Chula Vista — deep metallic blue shine and clean wheel" class="rounded-xl w-full h-64 md:h-80 object-cover" loading="lazy" />
+          <img src="photos/4runner-wheel-closeup.jpg" alt="Close-up of detailed Toyota 4Runner wheel with tire dressing" class="rounded-xl w-full h-64 md:h-80 object-cover" loading="lazy" />
+        </div>
       </div>
-      <div class="placeholder rounded-xl w-full h-48 md:h-64" role="img" aria-label="Finished vehicle placeholder">
-        <span class="label">FINISHED VEHICLE</span>
-        <span class="sub">Your photo here</span>
-      </div>
+
     </div>
-    <p class="text-center text-slate-500 text-sm mt-6">
-      Placeholder tiles — swap each one for a real before/after from Angel's jobs.
-    </p>
   </div>
 </section>
 
@@ -492,11 +534,7 @@
       <a href="#book" class="inline-block bg-ink text-white font-bold px-5 py-3 rounded-lg hover:bg-slate-800">Book With Angel</a>
     </div>
     <div>
-      <!-- Replace with real photo of Angel (portrait or in-action shot) -->
-      <div class="placeholder rounded-2xl w-full aspect-[4/5] shadow-lg" role="img" aria-label="Photo of Angel placeholder">
-        <span class="label">PHOTO OF ANGEL</span>
-        <span class="sub">Replace with a real headshot or on-the-job shot</span>
-      </div>
+      <img src="photos/angel-mustang-foam-wash.jpg" alt="Angel, owner of Reflection Detailing, foam-washing a Ford Mustang in Chula Vista" class="rounded-2xl w-full shadow-lg aspect-[4/5] object-cover" loading="lazy" />
     </div>
   </div>
 </section>
