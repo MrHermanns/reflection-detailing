@@ -74,7 +74,24 @@
     "https://www.google.com/maps/place/ReflectionDetailingLLC/@32.6251602,-116.9930442,17z/data=!4m6!3m5!1s0x80d94fa67ffea773:0xc1b49d6ca44d5c97!8m2!3d32.6251602!4d-116.9930442"
   ],
   "paymentAccepted": "Cash, Credit Card, Debit Card, Apple Pay, Google Pay, Zelle, Venmo",
-  "currenciesAccepted": "USD"
+  "currenciesAccepted": "USD",
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "IGL Coatings Certified Installer",
+      "recognizedBy": { "@type": "Organization", "name": "IGL Coatings" }
+    },
+    { "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "Paint Correction Certification",
+      "recognizedBy": { "@type": "Organization", "name": "HTL Detailing" }
+    },
+    { "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "Ceramic Coating Application — Paint, Windows, Wheels, Trim, Leather",
+      "recognizedBy": { "@type": "Organization", "name": "IGL Coatings" }
+    }
+  ]
 }
 </script>
 
@@ -314,7 +331,7 @@
       <div class="text-3xl mb-3">💎</div>
       <h3 class="font-bold text-lg">Paint Correction</h3>
       <p class="text-accent font-black text-2xl my-2">$499+</p>
-      <p class="text-slate-600 text-sm">Machine polish to remove swirl marks, light scratches, and oxidation. Restores depth and gloss.</p>
+      <p class="text-slate-600 text-sm"><strong>HTL Detailing Certified.</strong> Machine polish to remove swirl marks, light scratches, oxidation. Restores depth and gloss.</p>
       <p class="mt-3 text-accent font-bold text-sm">Book this →</p>
     </a>
 
@@ -322,7 +339,7 @@
       <div class="text-3xl mb-3">🛡️</div>
       <h3 class="font-bold text-lg">Ceramic Coating</h3>
       <p class="text-accent font-black text-2xl my-2">$449+</p>
-      <p class="text-slate-600 text-sm">2-year and 5-year graphene ceramic options. Includes full paint prep. Long-lasting protection.</p>
+      <p class="text-slate-600 text-sm"><strong>IGL Coatings Certified.</strong> 2-year and 5-year options. Paint, glass, wheels, trim, leather. Includes full prep.</p>
       <p class="mt-3 text-accent font-bold text-sm">Book this →</p>
     </a>
 
@@ -440,21 +457,67 @@
     </div>
     <div class="overflow-x-auto">
       <table class="w-full text-left border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
-        <thead class="bg-ink text-white text-sm">
+        <thead class="text-sm">
           <tr>
-            <th class="p-4"></th>
-            <th class="p-4 text-center">Reflection Mobile</th>
-            <th class="p-4 text-center">Shop Detailer</th>
-            <th class="p-4 text-center">DIY Weekend</th>
+            <th class="p-4 bg-ink text-white"></th>
+            <th class="p-4 bg-accent text-ink text-center relative">
+              <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-ink text-accent text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-full border-2 border-accent whitespace-nowrap">★ Best Choice ★</span>
+              <span class="block font-black">Reflection Mobile</span>
+              <span class="block text-[11px] font-normal opacity-80">We come to you</span>
+            </th>
+            <th class="p-4 bg-slate-700 text-white text-center">
+              <span class="block font-bold">Shop Detailer</span>
+              <span class="block text-[11px] font-normal opacity-80">You drive + wait</span>
+            </th>
+            <th class="p-4 bg-slate-500 text-white text-center">
+              <span class="block font-bold">DIY Weekend</span>
+              <span class="block text-[11px] font-normal opacity-80">Hose + elbow grease</span>
+            </th>
           </tr>
         </thead>
         <tbody class="text-sm">
-          <tr class="border-b border-slate-100"><td class="p-4 font-bold">Time commitment</td><td class="p-4 text-center">0 min driving</td><td class="p-4 text-center">1-2 hrs driving + wait</td><td class="p-4 text-center">Half your Saturday</td></tr>
-          <tr class="border-b border-slate-100 bg-slate-50"><td class="p-4 font-bold">Full detail cost</td><td class="p-4 text-center">$279</td><td class="p-4 text-center">$229-$389</td><td class="p-4 text-center">$150+ in supplies</td></tr>
-          <tr class="border-b border-slate-100"><td class="p-4 font-bold">Ceramic coating</td><td class="p-4 text-center">$449+ (pro-grade)</td><td class="p-4 text-center">$500-$1,500</td><td class="p-4 text-center">Not recommended</td></tr>
-          <tr class="border-b border-slate-100 bg-slate-50"><td class="p-4 font-bold">Paint correction</td><td class="p-4 text-center">Yes — pro polisher</td><td class="p-4 text-center">Yes</td><td class="p-4 text-center">Risky without training</td></tr>
-          <tr class="border-b border-slate-100"><td class="p-4 font-bold">Quality control</td><td class="p-4 text-center">Owner-operator, 5.0★</td><td class="p-4 text-center">Depends on technician</td><td class="p-4 text-center">Your results may vary</td></tr>
-          <tr><td class="p-4 font-bold">Water use</td><td class="p-4 text-center">~15 gal (eco rig)</td><td class="p-4 text-center">30-50 gal</td><td class="p-4 text-center">40-100 gal (hose)</td></tr>
+          <tr class="border-b border-slate-100">
+            <td class="p-4 font-bold">Time commitment</td>
+            <td class="p-4 text-center bg-amber-50 font-bold border-x-2 border-accent">✓ 0 min driving</td>
+            <td class="p-4 text-center text-slate-600">1-2 hrs driving + wait</td>
+            <td class="p-4 text-center text-slate-600">Half your Saturday</td>
+          </tr>
+          <tr class="border-b border-slate-100 bg-slate-50">
+            <td class="p-4 font-bold">Full detail cost</td>
+            <td class="p-4 text-center bg-amber-50 font-bold border-x-2 border-accent">$279</td>
+            <td class="p-4 text-center text-slate-600">$229-$389</td>
+            <td class="p-4 text-center text-slate-600">$150+ in supplies</td>
+          </tr>
+          <tr class="border-b border-slate-100">
+            <td class="p-4 font-bold">Ceramic coating</td>
+            <td class="p-4 text-center bg-amber-50 font-bold border-x-2 border-accent">✓ IGL Certified · $449+</td>
+            <td class="p-4 text-center text-slate-600">$500-$1,500</td>
+            <td class="p-4 text-center text-slate-600">Not recommended</td>
+          </tr>
+          <tr class="border-b border-slate-100 bg-slate-50">
+            <td class="p-4 font-bold">Paint correction</td>
+            <td class="p-4 text-center bg-amber-50 font-bold border-x-2 border-accent">✓ HTL Certified</td>
+            <td class="p-4 text-center text-slate-600">Yes, varies</td>
+            <td class="p-4 text-center text-slate-600">Risky without training</td>
+          </tr>
+          <tr class="border-b border-slate-100">
+            <td class="p-4 font-bold">Quality control</td>
+            <td class="p-4 text-center bg-amber-50 font-bold border-x-2 border-accent">✓ Owner-operator · 5.0★</td>
+            <td class="p-4 text-center text-slate-600">Depends on technician</td>
+            <td class="p-4 text-center text-slate-600">Your results may vary</td>
+          </tr>
+          <tr>
+            <td class="p-4 font-bold">Water use</td>
+            <td class="p-4 text-center bg-amber-50 font-bold border-x-2 border-accent">~15 gal (eco rig)</td>
+            <td class="p-4 text-center text-slate-600">30-50 gal</td>
+            <td class="p-4 text-center text-slate-600">40-100 gal (hose)</td>
+          </tr>
+          <tr class="border-t-2 border-accent bg-ink text-white">
+            <td class="p-4 font-bold"></td>
+            <td class="p-4 text-center bg-accent text-ink"><a href="#book" class="font-black hover:underline">Book Reflection →</a></td>
+            <td class="p-4 text-center text-slate-400 text-xs">—</td>
+            <td class="p-4 text-center text-slate-400 text-xs">—</td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -558,13 +621,20 @@
       <p class="text-slate-700 text-lg leading-relaxed mb-4">
         I bring my own water, my own power, and everything else I need. You get a premium detail without ever leaving your driveway.
       </p>
-      <ul class="text-slate-700 space-y-1 mb-6 text-sm">
+      <ul class="text-slate-700 space-y-1 mb-5 text-sm">
         <li>✓ Owner-operator — never outsourced</li>
         <li>✓ Fully insured and bonded</li>
         <li>✓ Self-contained rig — no outlet, no hose, no mess</li>
-        <li>✓ Professional chemistry: ceramic sprays, sealants, clay bars, polishing compounds</li>
         <li>✓ Rated 5.0 on Google · Family-owned and local to Chula Vista</li>
       </ul>
+      <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-6">
+        <p class="text-xs uppercase tracking-widest text-accent font-bold mb-2">Certifications</p>
+        <ul class="text-slate-700 space-y-1 text-sm">
+          <li>✓ <strong>IGL Coatings Certified Installer</strong> — premium ceramic coating specialist</li>
+          <li>✓ <strong>HTL Detailing Certified</strong> — Paint Correction</li>
+          <li>✓ Certified Ceramic Coating application — Paint, Windows, Wheels, Trim, Leather</li>
+        </ul>
+      </div>
       <a href="#book" class="inline-block bg-ink text-white font-bold px-5 py-3 rounded-lg hover:bg-slate-800">Book With Angel</a>
     </div>
     <div>
@@ -778,9 +848,33 @@
   </div>
 </section>
 
+<!-- ============ EXPLORE MORE ============ -->
+<section class="bg-slate-50 border-t border-slate-200 py-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-10">
+      <p class="uppercase tracking-widest text-accent font-bold text-sm">Explore More</p>
+      <h2 class="text-2xl md:text-3xl font-black mt-2">Dig deeper into any service or area</h2>
+    </div>
+    <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-3 text-sm">
+      <a href="ceramic-coating/" class="block bg-white border border-slate-200 rounded-lg p-4 hover:border-accent"><span class="font-bold">Ceramic Coating</span><span class="block text-slate-500 text-xs mt-1">IGL Certified · from $449</span></a>
+      <a href="paint-correction/" class="block bg-white border border-slate-200 rounded-lg p-4 hover:border-accent"><span class="font-bold">Paint Correction</span><span class="block text-slate-500 text-xs mt-1">HTL Certified · from $499</span></a>
+      <a href="mobile-detailing/" class="block bg-white border border-slate-200 rounded-lg p-4 hover:border-accent"><span class="font-bold">Mobile Detailing</span><span class="block text-slate-500 text-xs mt-1">Self-contained · from $89</span></a>
+      <a href="interior-detail/" class="block bg-white border border-slate-200 rounded-lg p-4 hover:border-accent"><span class="font-bold">Interior Detail</span><span class="block text-slate-500 text-xs mt-1">Full interior · $179</span></a>
+      <a href="headlight-restoration/" class="block bg-white border border-slate-200 rounded-lg p-4 hover:border-accent"><span class="font-bold">Headlight Restoration</span><span class="block text-slate-500 text-xs mt-1">45 min · $99/pair</span></a>
+      <a href="pricing/" class="block bg-white border border-slate-200 rounded-lg p-4 hover:border-accent"><span class="font-bold">Full Price List</span><span class="block text-slate-500 text-xs mt-1">Transparent pricing</span></a>
+      <a href="chula-vista/" class="block bg-white border border-slate-200 rounded-lg p-4 hover:border-accent"><span class="font-bold">Chula Vista</span><span class="block text-slate-500 text-xs mt-1">Service area</span></a>
+      <a href="eastlake/" class="block bg-white border border-slate-200 rounded-lg p-4 hover:border-accent"><span class="font-bold">Eastlake</span><span class="block text-slate-500 text-xs mt-1">Service area</span></a>
+      <a href="bonita/" class="block bg-white border border-slate-200 rounded-lg p-4 hover:border-accent"><span class="font-bold">Bonita</span><span class="block text-slate-500 text-xs mt-1">Service area</span></a>
+      <a href="otay-ranch/" class="block bg-white border border-slate-200 rounded-lg p-4 hover:border-accent"><span class="font-bold">Otay Ranch</span><span class="block text-slate-500 text-xs mt-1">Service area</span></a>
+      <a href="learn/" class="block bg-white border border-slate-200 rounded-lg p-4 hover:border-accent"><span class="font-bold">Detailing Guides</span><span class="block text-slate-500 text-xs mt-1">Wax vs ceramic, pricing, & more</span></a>
+      <a href="learn/wax-vs-ceramic-coating/" class="block bg-white border border-slate-200 rounded-lg p-4 hover:border-accent"><span class="font-bold">Wax vs Ceramic Coating</span><span class="block text-slate-500 text-xs mt-1">Guide</span></a>
+    </div>
+  </div>
+</section>
+
 <!-- ============ FOOTER ============ -->
 <footer class="bg-slate-900 text-slate-400 text-sm">
-  <div class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-8">
+  <div class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-4 gap-8">
     <div>
       <div class="flex items-center gap-2 mb-3">
         <svg viewBox="0 0 40 40" class="w-8 h-8" aria-hidden="true">
@@ -790,18 +884,37 @@
         </svg>
         <span class="font-black text-white text-base">Reflection Detailing</span>
       </div>
-      <p>Mobile auto detailing in Chula Vista and South San Diego.</p>
+      <p>Mobile auto detailing in Chula Vista & South San Diego.</p>
+      <p class="mt-2 text-xs">IGL Coatings Certified · HTL Detailing Certified</p>
+    </div>
+    <div>
+      <p class="font-bold text-white mb-2">Services</p>
+      <ul class="space-y-1">
+        <li><a href="mobile-detailing/" class="hover:text-accent">Mobile Detailing</a></li>
+        <li><a href="ceramic-coating/" class="hover:text-accent">Ceramic Coating</a></li>
+        <li><a href="paint-correction/" class="hover:text-accent">Paint Correction</a></li>
+        <li><a href="interior-detail/" class="hover:text-accent">Interior Detail</a></li>
+        <li><a href="headlight-restoration/" class="hover:text-accent">Headlight Restoration</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-bold text-white mb-2">Service Areas</p>
+      <ul class="space-y-1">
+        <li><a href="chula-vista/" class="hover:text-accent">Chula Vista</a></li>
+        <li><a href="eastlake/" class="hover:text-accent">Eastlake</a></li>
+        <li><a href="bonita/" class="hover:text-accent">Bonita</a></li>
+        <li><a href="otay-ranch/" class="hover:text-accent">Otay Ranch</a></li>
+      </ul>
     </div>
     <div>
       <p class="font-bold text-white mb-2">Contact</p>
       <p><a href="tel:+16193410016" class="hover:text-accent">(619) 341-0016</a></p>
       <p>Chula Vista, CA 91913</p>
-    </div>
-    <div>
-      <p class="font-bold text-white mb-2">Hours</p>
-      <p>Mon 9-5</p>
-      <p>Tue-Sat 7-6</p>
-      <p>Sun 7-2</p>
+      <p class="mt-3 font-bold text-white mb-1">Resources</p>
+      <ul class="space-y-1">
+        <li><a href="pricing/" class="hover:text-accent">Pricing</a></li>
+        <li><a href="learn/" class="hover:text-accent">Detailing Guides</a></li>
+      </ul>
     </div>
   </div>
   <div class="border-t border-slate-800 py-4 text-center">
