@@ -10,7 +10,7 @@ import json
 import textwrap
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-BASE_URL = "https://mrhermanns.github.io/reflection-detailing"
+BASE_URL = "https://reflectiondetailingsd.com"
 BRAND = "Reflection Detailing"
 PHONE_DISPLAY = "(619) 341-0016"
 PHONE_TEL = "+16193410016"
@@ -63,8 +63,8 @@ def local_business_schema():
   "@type": "AutoDetailing",
   "name": "Reflection Detailing",
   "description": "Mobile auto detailing service in Chula Vista, CA. IGL Coatings Certified and HTL Detailing Certified. Ceramic coating, paint correction, headlight restoration, and full interior and exterior detailing.",
-  "image": "https://mrhermanns.github.io/reflection-detailing/brand/banner-4runner.jpg?v=4",
-  "url": "https://mrhermanns.github.io/reflection-detailing/",
+  "image": "https://reflectiondetailingsd.com/brand/banner-4runner.jpg?v=4",
+  "url": "https://reflectiondetailingsd.com/",
   "telephone": "+1-619-341-0016",
   "priceRange": "$$",
   "address": { "@type": "PostalAddress", "addressLocality": "Chula Vista", "addressRegion": "CA", "postalCode": "91913", "addressCountry": "US" },
