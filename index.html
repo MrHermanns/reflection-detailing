@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#0f172a" />
+
+<title>Reflection Detailing — Mobile Auto Detailing in Chula Vista, CA</title>
+<meta name="description" content="Premium mobile auto detailing in Chula Vista and the South Bay. We come to you — fully self-contained with water and power. Full details from $89, ceramic coating, paint correction, headlight restoration. Book online or call (619) 341-0016." />
+<link rel="canonical" href="https://reflectiondetailingsd.com/" />
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Reflection Detailing — Mobile Auto Detailing in Chula Vista" />
+<meta property="og:description" content="Premium mobile auto detailing in Chula Vista & South San Diego. Self-contained. Satisfaction guaranteed. Book online today." />
+<meta property="og:url" content="https://reflectiondetailingsd.com/" />
+<meta property="og:image" content="https://reflectiondetailingsd.com/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- Favicons (replace with real files once available) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230f172a'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial Black' font-size='32' fill='%23f59e0b'%3ER%3C/text%3E%3C/svg%3E" />
+
+<!-- Tailwind via CDN (keeps it single-file; swap for a build when scaling) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#0f172a',
+          accent: '#f59e0b',
+        },
+        fontFamily: { sans: ['system-ui','-apple-system','Segoe UI','Roboto','Helvetica','Arial','sans-serif'] }
+      }
+    }
+  }
+</script>
+
+<!-- LocalBusiness schema — critical for local SEO; edit values once you have real photos, price range, social URLs -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoDetailing",
+  "name": "Reflection Detailing",
+  "description": "Mobile auto detailing service in Chula Vista, CA. Interior and exterior detailing, ceramic coating, paint correction, and headlight restoration — at your location.",
+  "image": "https://reflectiondetailingsd.com/og-image.jpg",
+  "url": "https://reflectiondetailingsd.com/",
+  "telephone": "+1-619-341-0016",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Chula Vista",
+    "addressRegion": "CA",
+    "postalCode": "91913",
+    "addressCountry": "US"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 32.6252, "longitude": -116.993 },
+  "areaServed": [
+    "Chula Vista, CA", "Bonita, CA", "Eastlake, CA", "Otay Ranch, CA",
+    "National City, CA", "Imperial Beach, CA", "Coronado, CA", "San Diego, CA",
+    "Spring Valley, CA", "La Mesa, CA"
+  ],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "09:00", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "07:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "07:00", "closes": "14:00" }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "4"
+  }
+}
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  .hero-bg {
+    background-image:
+      linear-gradient(rgba(15,23,42,.72), rgba(15,23,42,.82)),
+      url('https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1800&q=80');
+    background-size: cover;
+    background-position: center;
+  }
+  .card-hover { transition: transform .18s ease, box-shadow .18s ease; }
+  .card-hover:hover { transform: translateY(-2px); box-shadow: 0 20px 40px -20px rgba(15,23,42,.25); }
+</style>
+</head>
+<body class="bg-white text-ink antialiased font-sans">
+
+<!-- ============ STICKY NAV ============ -->
+<header class="sticky top-0 z-40 bg-ink/95 backdrop-blur text-white">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2 font-black tracking-tight text-lg">
+      <span class="inline-block w-8 h-8 rounded-full bg-accent text-ink grid place-items-center font-black">R</span>
+      <span>Reflection Detailing</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-sm">
+      <a href="#services" class="hover:text-accent">Services</a>
+      <a href="#gallery" class="hover:text-accent">Gallery</a>
+      <a href="#about" class="hover:text-accent">About</a>
+      <a href="#area" class="hover:text-accent">Service Area</a>
+      <a href="#reviews" class="hover:text-accent">Reviews</a>
+    </nav>
+    <a href="#book" class="bg-accent text-ink font-bold px-4 py-2 rounded-lg hover:opacity-90 text-sm">Book</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="top" class="hero-bg text-white">
+  <div class="max-w-6xl mx-auto px-4 py-24 md:py-36 text-center">
+    <p class="uppercase tracking-widest text-accent font-bold text-sm mb-4">Chula Vista · South San Diego</p>
+    <h1 class="text-4xl md:text-6xl font-black leading-tight mb-5">
+      Premium Mobile Auto Detailing.<br/>
+      <span class="text-accent">We come to you.</span>
+    </h1>
+    <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8 text-slate-200">
+      Fully self-contained — water, power, and pro-grade products delivered to your driveway, office, or jobsite. Family-owned. Satisfaction guaranteed.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="#book" class="bg-accent text-ink font-bold px-6 py-3 rounded-lg hover:opacity-90">Book a Detail</a>
+      <a href="tel:+16193410016" class="bg-white/10 border border-white/30 text-white font-bold px-6 py-3 rounded-lg hover:bg-white/20">Call (619) 341-0016</a>
+    </div>
+    <div class="flex flex-wrap justify-center gap-6 mt-10 text-sm text-slate-300">
+      <span>★★★★★ 5.0 on Google</span>
+      <span>·</span>
+      <span>Serving Chula Vista, Bonita, Eastlake & beyond</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<section class="bg-slate-50 border-y border-slate-200">
+  <div class="max-w-6xl mx-auto px-4 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+    <div>
+      <div class="text-3xl mb-1">⏱️</div>
+      <div class="font-bold">On Time, Every Time</div>
+      <div class="text-sm text-slate-600">Arrive ready to work</div>
+    </div>
+    <div>
+      <div class="text-3xl mb-1">💧</div>
+      <div class="font-bold">Self-Contained</div>
+      <div class="text-sm text-slate-600">Our water, our power</div>
+    </div>
+    <div>
+      <div class="text-3xl mb-1">🛡️</div>
+      <div class="font-bold">Fully Insured</div>
+      <div class="text-sm text-slate-600">Licensed and bonded</div>
+    </div>
+    <div>
+      <div class="text-3xl mb-1">✓</div>
+      <div class="font-bold">Satisfaction Guarantee</div>
+      <div class="text-sm text-slate-600">Love it or we fix it</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="max-w-6xl mx-auto px-4 py-20">
+  <div class="text-center mb-12">
+    <p class="uppercase tracking-widest text-accent font-bold text-sm">What We Do</p>
+    <h2 class="text-3xl md:text-4xl font-black mt-2">Services & Pricing</h2>
+    <p class="text-slate-600 mt-3 max-w-2xl mx-auto">
+      Base pricing shown for sedans and coupes. SUVs +$40, full-size trucks and vans +$60 to $80.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+    <div class="card-hover border border-slate-200 rounded-xl p-6">
+      <div class="text-3xl mb-3">🧽</div>
+      <h3 class="font-bold text-lg">Mini Detail</h3>
+      <p class="text-accent font-black text-2xl my-2">$89</p>
+      <p class="text-slate-600 text-sm">Hand wash, interior vacuum, window clean, tire dressing. Perfect between full details. ~60 min.</p>
+    </div>
+
+    <div class="card-hover border border-slate-200 rounded-xl p-6">
+      <div class="text-3xl mb-3">🧼</div>
+      <h3 class="font-bold text-lg">Full Interior Detail</h3>
+      <p class="text-accent font-black text-2xl my-2">$179</p>
+      <p class="text-slate-600 text-sm">Deep vacuum, carpet & upholstery shampoo, leather condition, UV protect, odor neutralize. 2-3 hrs.</p>
+    </div>
+
+    <div class="card-hover border border-slate-200 rounded-xl p-6">
+      <div class="text-3xl mb-3">✨</div>
+      <h3 class="font-bold text-lg">Full Exterior Detail</h3>
+      <p class="text-accent font-black text-2xl my-2">$169</p>
+      <p class="text-slate-600 text-sm">Hand wash, clay bar, wheel & tire deep clean, spray sealant, trim dressing. 2-3 hrs.</p>
+    </div>
+
+    <div class="card-hover border-2 border-accent rounded-xl p-6 relative">
+      <span class="absolute -top-3 right-4 bg-accent text-ink text-xs font-black uppercase px-2 py-1 rounded">Most Popular</span>
+      <div class="text-3xl mb-3">🚗</div>
+      <h3 class="font-bold text-lg">The Works — In + Out</h3>
+      <p class="text-accent font-black text-2xl my-2">$279</p>
+      <p class="text-slate-600 text-sm">Complete interior and exterior package. The reset button for daily drivers. 4-5 hrs.</p>
+    </div>
+
+    <div class="card-hover border border-slate-200 rounded-xl p-6">
+      <div class="text-3xl mb-3">💎</div>
+      <h3 class="font-bold text-lg">Paint Correction</h3>
+      <p class="text-accent font-black text-2xl my-2">$499+</p>
+      <p class="text-slate-600 text-sm">Machine polish to remove swirl marks, light scratches, and oxidation. Restores depth and gloss.</p>
+    </div>
+
+    <div class="card-hover border border-slate-200 rounded-xl p-6">
+      <div class="text-3xl mb-3">🛡️</div>
+      <h3 class="font-bold text-lg">Ceramic Coating</h3>
+      <p class="text-accent font-black text-2xl my-2">$449+</p>
+      <p class="text-slate-600 text-sm">2-year and 5-year graphene ceramic options. Includes full paint prep. Long-lasting protection.</p>
+    </div>
+
+    <div class="card-hover border border-slate-200 rounded-xl p-6">
+      <div class="text-3xl mb-3">🔦</div>
+      <h3 class="font-bold text-lg">Headlight Restoration</h3>
+      <p class="text-accent font-black text-2xl my-2">$99 <span class="text-base text-slate-500 font-normal">/ pair</span></p>
+      <p class="text-slate-600 text-sm">Sand, polish, and UV seal cloudy or yellowed headlights. ~45 min. Clearer beams, cleaner look.</p>
+    </div>
+
+    <div class="card-hover border border-slate-200 rounded-xl p-6">
+      <div class="text-3xl mb-3">🐾</div>
+      <h3 class="font-bold text-lg">Pet Hair Removal</h3>
+      <p class="text-accent font-black text-2xl my-2">+$40</p>
+      <p class="text-slate-600 text-sm">Specialized extraction for embedded pet hair. Add to any interior package.</p>
+    </div>
+
+    <div class="card-hover border border-slate-200 rounded-xl p-6 bg-slate-50">
+      <div class="text-3xl mb-3">🔁</div>
+      <h3 class="font-bold text-lg">Monthly Maintenance</h3>
+      <p class="text-accent font-black text-2xl my-2">from $149/mo</p>
+      <p class="text-slate-600 text-sm">Keep your car show-ready year-round. 2 mini details/month or 1 full detail. Save ~$30/mo.</p>
+    </div>
+
+  </div>
+
+  <p class="text-center mt-10 text-slate-600">
+    Need something custom? RV, boat, or motorcycle detailing —
+    <a href="tel:+16193410016" class="text-ink underline hover:text-accent">text Angel at (619) 341-0016</a>.
+  </p>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" class="bg-slate-50 py-20">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <p class="uppercase tracking-widest text-accent font-bold text-sm">The Work</p>
+      <h2 class="text-3xl md:text-4xl font-black mt-2">Before & After</h2>
+      <p class="text-slate-600 mt-3">Recent details across Chula Vista and South San Diego.</p>
+    </div>
+
+    <!-- Replace src URLs with Angel's real photos. Keep aspect ratios consistent. -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <img src="https://images.unsplash.com/photo-1605542704330-ec9ea8c97d5e?auto=format&fit=crop&w=600&q=80" alt="Paint correction before and after" class="rounded-xl w-full h-48 md:h-64 object-cover" />
+      <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=600&q=80" alt="Exterior detail — fresh wax shine" class="rounded-xl w-full h-48 md:h-64 object-cover" />
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" alt="Interior detail — clean dashboard" class="rounded-xl w-full h-48 md:h-64 object-cover" />
+      <img src="https://images.unsplash.com/photo-1590361232060-19ed0a6d1f37?auto=format&fit=crop&w=600&q=80" alt="Ceramic coating finish on black car" class="rounded-xl w-full h-48 md:h-64 object-cover" />
+      <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=600&q=80" alt="Wheel deep clean detail" class="rounded-xl w-full h-48 md:h-64 object-cover" />
+      <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=600&q=80" alt="Full detail — finished vehicle" class="rounded-xl w-full h-48 md:h-64 object-cover" />
+    </div>
+    <p class="text-center text-slate-500 text-sm mt-6">
+      Placeholder images — swap for Angel's own before/afters for best results.
+    </p>
+  </div>
+</section>
+
+<!-- ============ ABOUT ANGEL ============ -->
+<section id="about" class="max-w-6xl mx-auto px-4 py-20">
+  <div class="grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <p class="uppercase tracking-widest text-accent font-bold text-sm">Meet Angel</p>
+      <h2 class="text-3xl md:text-4xl font-black mt-2 mb-5">The Guy Behind Reflection</h2>
+      <p class="text-slate-700 text-lg leading-relaxed mb-4">
+        I'm Angel — owner, operator, and the only one who touches your car. I started Reflection because I'm picky about my own vehicles and I know you are too. Every detail is done with the same care I'd give my own daily driver.
+      </p>
+      <p class="text-slate-700 text-lg leading-relaxed mb-6">
+        I bring my own water, my own power, and everything else I need. You get a premium detail without ever leaving your driveway. That's the whole point.
+      </p>
+      <a href="#book" class="inline-block bg-ink text-white font-bold px-5 py-3 rounded-lg hover:bg-slate-800">Book With Angel</a>
+    </div>
+    <div>
+      <!-- Replace with real photo of Angel -->
+      <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=700&q=80" alt="Angel, owner of Reflection Detailing" class="rounded-2xl w-full shadow-lg" />
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICE AREA ============ -->
+<section id="area" class="bg-slate-50 py-20">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-10">
+      <p class="uppercase tracking-widest text-accent font-bold text-sm">Where We Go</p>
+      <h2 class="text-3xl md:text-4xl font-black mt-2">Service Area</h2>
+      <p class="text-slate-600 mt-3 max-w-2xl mx-auto">Free mobile service throughout South San Diego. Not sure if we cover you? Just text.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d53566.8!2d-117.01!3d32.625!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d94fa67ffea773%3A0xc1b49d6ca44d5c97!2sChula%20Vista%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000"
+        width="100%" height="360"
+        style="border:0; border-radius: 1rem;"
+        allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Reflection Detailing service area map">
+      </iframe>
+      <div class="grid grid-cols-2 gap-2 text-slate-700">
+        <div>• Chula Vista</div>
+        <div>• Bonita</div>
+        <div>• Eastlake</div>
+        <div>• Otay Ranch</div>
+        <div>• National City</div>
+        <div>• Imperial Beach</div>
+        <div>• Coronado</div>
+        <div>• San Diego</div>
+        <div>• Spring Valley</div>
+        <div>• La Mesa</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section id="reviews" class="max-w-6xl mx-auto px-4 py-20">
+  <div class="text-center mb-12">
+    <p class="uppercase tracking-widest text-accent font-bold text-sm">What People Say</p>
+    <h2 class="text-3xl md:text-4xl font-black mt-2">★★★★★ 5.0 on Google</h2>
+  </div>
+  <div class="grid md:grid-cols-3 gap-5">
+    <blockquote class="border border-slate-200 rounded-xl p-6">
+      <p class="text-slate-700 mb-3">"I'm very picky on who touches my vehicles. Angel has passion and craft for his clients — my vehicles will forever be serviced by him."</p>
+      <footer class="text-sm font-bold">— Victor M.</footer>
+    </blockquote>
+    <blockquote class="border border-slate-200 rounded-xl p-6">
+      <p class="text-slate-700 mb-3">"Over delivered on the detail, communicative, and on time."</p>
+      <footer class="text-sm font-bold">— Hiram L.</footer>
+    </blockquote>
+    <blockquote class="border border-slate-200 rounded-xl p-6">
+      <p class="text-slate-700 mb-3">"My go-to detailer! 🔥 Nothing feels better than a clean detailed car. Provides all power and water — really convenient."</p>
+      <footer class="text-sm font-bold">— Vargas Enterprises</footer>
+    </blockquote>
+  </div>
+  <div class="text-center mt-8">
+    <a href="https://www.google.com/maps/place/ReflectionDetailingLLC/@32.6251602,-116.9930442,17z/data=!4m6!3m5!1s0x80d94fa67ffea773:0xc1b49d6ca44d5c97!8m2!3d32.6251602!4d-116.9930442"
+       target="_blank" rel="noopener"
+       class="inline-block border border-slate-300 rounded-lg px-5 py-3 font-bold hover:border-accent hover:text-accent">
+      See all reviews on Google →
+    </a>
+  </div>
+</section>
+
+<!-- ============ BOOK NOW ============ -->
+<section id="book" class="bg-ink text-white py-20">
+  <div class="max-w-3xl mx-auto px-4 text-center">
+    <p class="uppercase tracking-widest text-accent font-bold text-sm">Ready to Roll</p>
+    <h2 class="text-3xl md:text-4xl font-black mt-2 mb-4">Book Your Detail</h2>
+    <p class="text-slate-300 mb-8">
+      Pick a time online, or text Angel directly for same-day availability.
+    </p>
+
+    <!--
+      SETMORE EMBED
+      Replace this placeholder with the real Setmore snippet from:
+      Setmore dashboard → Apps & Integrations → Booking Page → Embed Booking Button
+    -->
+    <div class="bg-white text-ink rounded-2xl p-8 mb-6">
+      <p class="font-bold text-lg mb-3">📅 Online Booking</p>
+      <p class="text-slate-600 text-sm mb-4">Your Setmore widget will live here once embedded.</p>
+      <a href="https://REPLACE-WITH-SETMORE-URL.setmore.com" target="_blank" rel="noopener"
+         class="inline-block bg-accent text-ink font-bold px-6 py-3 rounded-lg hover:opacity-90">
+        Book Online
+      </a>
+    </div>
+
+    <p class="text-slate-300 mb-3">Or just text:</p>
+    <a href="sms:+16193410016" class="inline-block bg-white text-ink font-bold px-6 py-3 rounded-lg hover:bg-slate-100">
+      Text (619) 341-0016
+    </a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-slate-900 text-slate-400 text-sm">
+  <div class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-8">
+    <div>
+      <div class="flex items-center gap-2 mb-3">
+        <span class="inline-block w-8 h-8 rounded-full bg-accent text-ink grid place-items-center font-black">R</span>
+        <span class="font-black text-white text-base">Reflection Detailing</span>
+      </div>
+      <p>Mobile auto detailing in Chula Vista and South San Diego.</p>
+    </div>
+    <div>
+      <p class="font-bold text-white mb-2">Contact</p>
+      <p><a href="tel:+16193410016" class="hover:text-accent">(619) 341-0016</a></p>
+      <p>Chula Vista, CA 91913</p>
+    </div>
+    <div>
+      <p class="font-bold text-white mb-2">Hours</p>
+      <p>Mon 9-5</p>
+      <p>Tue-Sat 7-6</p>
+      <p>Sun 7-2</p>
+    </div>
+  </div>
+  <div class="border-t border-slate-800 py-4 text-center">
+    © <script>document.write(new Date().getFullYear())</script> Reflection Detailing LLC. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
