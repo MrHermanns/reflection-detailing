@@ -172,7 +172,6 @@ def footer_html(depth=1):
         <li><a href="{rel}ceramic-coating/" class="hover:text-accent">Ceramic Coating</a></li>
         <li><a href="{rel}paint-correction/" class="hover:text-accent">Paint Correction</a></li>
         <li><a href="{rel}interior-detail/" class="hover:text-accent">Interior Detail</a></li>
-        <li><a href="{rel}headlight-restoration/" class="hover:text-accent">Headlight Restoration</a></li>
       </ul>
     </div>
     <div>
@@ -210,12 +209,12 @@ SERVICE_PAGES = [
     {
         "slug": "ceramic-coating",
         "name": "Ceramic Coating",
-        "price_from": "$449",
+        "price_from": "$650",
         "h1": "Mobile Ceramic Coating in Chula Vista, CA",
-        "tagline": "IGL Coatings Certified · 2-year, 5-year, and 9-year options",
-        "keywords": "ceramic coating chula vista, mobile ceramic coating san diego, IGL coatings installer, graphene ceramic coating",
-        "description": "IGL Coatings Certified mobile ceramic coating in Chula Vista, CA. 2-year to 9-year protection. We come to your driveway. From $449. Call (619) 341-0016.",
-        "intro": "A ceramic coating is the strongest paint protection available short of a full PPF. We're IGL Coatings Certified installers — that means the coating is applied to manufacturer spec, backed by the warranty, and performs exactly as advertised. Mobile service, self-contained, anywhere in South Bay.",
+        "tagline": "IGL Coatings Certified · Professional-grade ceramic application",
+        "keywords": "ceramic coating chula vista, mobile ceramic coating san diego, IGL coatings installer, IGL ceramic",
+        "description": "IGL Coatings Certified mobile ceramic coating in Chula Vista, CA. Professional IGL Ceramic application. $650. 7-hour service. We come to your driveway. Call (619) 341-0016.",
+        "intro": "A ceramic coating is the strongest paint protection available short of a full PPF. We're an IGL Coatings Certified installer using professional-grade IGL Ceramic — that means the coating is applied to manufacturer spec by a trained installer. Mobile service, self-contained, anywhere in South Bay. Service runs about 7 hours on-site.",
         "benefits": [
             ("Years of protection", "IGL ceramic coatings last 2 to 9 years depending on tier. Wax lasts 1-3 months. Do the math."),
             ("Hydrophobic shine", "Water beads up and rolls off. Dirt, mud, and road grime have nothing to grip."),
@@ -232,26 +231,23 @@ SERVICE_PAGES = [
             ("Cure + Final Inspection", "Coating flashes for 20-30 minutes per panel. We walk the finished vehicle with you before leaving."),
         ],
         "pricing_rows": [
-            ("2-year Graphene Ceramic", "$449+", "Best value entry tier. Hydrophobic, gloss boost, UV protection. Sedan/coupe base."),
-            ("5-year Premium Graphene", "$849+", "Paint correction + premium IGL coating. Our most popular package."),
-            ("9-year Flagship IGL", "$1,499+", "Longest-lasting option. Full 2-step correction + top-tier IGL coating with warranty documentation."),
-            ("Glass Coating Add-On", "+$129", "Hydrophobic coating on all windows. Rain sheets off — no wipers needed at speed."),
-            ("Wheel Face Coating", "+$149", "Ceramic on wheel faces. Brake dust wipes off with a damp cloth. Huge time-saver."),
-            ("Leather / Trim Coating", "+$99 / +$79", "Protects interior surfaces from UV fading and stains."),
+            ("Ceramic Coating (IGL)", "$650", "Professional IGL Ceramic Coating application. 7-hour service. Can be applied with or without paint correction."),
+            ("Paint Correction Level 1 (recommended add-on)", "$450", "Polishing-only — removes up to half the paint defects. Required for best coating bond."),
+            ("Paint Correction Level 2 (heavier defects)", "$875", "Medium-to-heavy compound + polish. For paint with deeper swirl marks and oxidation."),
         ],
         "faq": [
-            ("Is a ceramic coating really worth it?",
-             "If you're keeping the car more than 2 years, yes. A 5-year IGL coating at $849 equals about $170/year for paint that looks showroom-fresh, washes faster, and resists environmental damage. A $100 annual wax gets you worse protection for more money."),
+            ("How much does a ceramic coating cost?",
+             "Our IGL Ceramic Coating is $650 for the coating application. If your paint needs correction first (most do), add Paint Correction Level 1 at $450 or Level 2 at $875 depending on how much defect removal is needed. Plan on 7 hours on-site for the coating, plus correction time."),
             ("Can I wash my car after a ceramic coating?",
              "Yes — and it's easier than before. Wait 7 days after application before the first wash. After that, any standard hand-wash method works. Avoid automatic car washes with rotating brushes."),
             ("Do I still need to wax after ceramic coating?",
              "No. A ceramic coating replaces wax entirely for the duration of its lifespan. Adding wax on top is a waste of product."),
             ("Why pay for an IGL Coatings Certified installer?",
              "IGL-certified installers are trained directly by IGL on their specific product line, application technique, and surface prep. Uncertified shops often substitute cheaper coatings — you pay for IGL pricing but get unknown chemistry. With a certified installer, what you pay for is what goes on your car, period."),
-            ("How long does ceramic coating take?",
-             "A full coating job with paint correction takes 6-8 hours on-site. We start early and work through the day."),
+            ("Do I need paint correction before a ceramic coating?",
+             "It's strongly recommended. Ceramic is transparent — it locks in whatever is underneath. If your paint has swirl marks or oxidation and you skip correction, the coating will preserve those defects for years. We can coat without correction, but we'll be honest about the result before starting."),
         ],
-        "also_see": [("paint-correction", "Paint Correction"), ("mobile-detailing", "Mobile Detailing"), ("headlight-restoration", "Headlight Restoration")],
+        "also_see": [("paint-correction", "Paint Correction"), ("mobile-detailing", "Mobile Detailing"), ("interior-detail", "Interior Detail")],
         "photos": [
             ("photos/4runner-exterior-after.jpg?v=3", "Toyota 4Runner with deep metallic blue gloss after ceramic coating in Chula Vista", "Coated finish on a 4Runner"),
             ("photos/wheel-after.jpg?v=3", "Clean polished wheel after ceramic coating protection", "Ceramic-protected wheel"),
@@ -260,11 +256,11 @@ SERVICE_PAGES = [
     {
         "slug": "paint-correction",
         "name": "Paint Correction",
-        "price_from": "$499",
+        "price_from": "$450",
         "h1": "Paint Correction in Chula Vista & South San Diego",
-        "tagline": "HTL Detailing Certified · 1-step and 2-step machine polishing",
+        "tagline": "HTL Detailing Certified · Level 1 and Level 2 machine polishing",
         "keywords": "paint correction chula vista, paint correction san diego, swirl mark removal, machine polish",
-        "description": "HTL Detailing Certified paint correction in Chula Vista. Remove swirl marks, scratches, oxidation. Mobile service. From $499. Book online or call (619) 341-0016.",
+        "description": "HTL Detailing Certified paint correction in Chula Vista. Remove swirl marks, scratches, oxidation. Mobile service. Level 1 $450, Level 2 $875. (619) 341-0016.",
         "intro": "Paint correction physically removes a micro-thin layer of clear coat to eliminate swirl marks, light scratches, water spots, and oxidation. The result is depth, clarity, and gloss that no wax or spray sealant can fake. We're HTL Detailing Certified — formal training on compound selection, pad matching, and paint-thickness-safe polishing.",
         "benefits": [
             ("Visible swirl + scratch removal", "1-step corrects 60-70% of defects. 2-step handles 80-95% including deeper scratches."),
@@ -281,10 +277,8 @@ SERVICE_PAGES = [
             ("Protection Applied", "Spray sealant included. Ceramic coating available as upgrade."),
         ],
         "pricing_rows": [
-            ("1-Step Correction", "$499+", "Removes light-to-moderate swirls, marring, oxidation. Sedan/coupe base. Adds 2-3 hours to any detail."),
-            ("2-Step Correction", "$749+", "Compound + polish for heavier defects. 80-95% defect removal."),
-            ("3-Step Correction", "$999+", "Heavy compound + polish + final finish. Show-car-level work."),
-            ("Wet Sand (severe defects)", "Quote", "For deep scratches that polishing alone won't fix. Priced per panel after inspection."),
+            ("Paint Correction Level 1", "$450", "Polishing only — removes up to half the defects (light-to-moderate swirls, marring, oxidation). 3-hour service."),
+            ("Paint Correction Level 2", "$875", "Medium-to-heavy compound + polish refining step. Removes medium-to-heavy defects. 6-hour service."),
         ],
         "faq": [
             ("How do I know if I need paint correction?",
@@ -298,7 +292,7 @@ SERVICE_PAGES = [
             ("What is the difference between polish and compound?",
              "Compound is more abrasive — it cuts deeper to remove heavier defects. Polish is finer — it refines and adds gloss. A 2-step uses both in sequence."),
         ],
-        "also_see": [("ceramic-coating", "Ceramic Coating"), ("mobile-detailing", "Mobile Detailing"), ("headlight-restoration", "Headlight Restoration")],
+        "also_see": [("ceramic-coating", "Ceramic Coating"), ("mobile-detailing", "Mobile Detailing"), ("interior-detail", "Interior Detail")],
         "photos": [
             ("photos/accord-paint-headlight-before.jpg?v=3", "Honda Accord before paint correction — oxidized paint and cloudy headlight", "BEFORE paint correction"),
             ("photos/accord-paint-headlight-after.jpg?v=3", "Same Honda Accord after paint correction — restored gloss and clear headlights", "AFTER paint correction"),
@@ -307,11 +301,11 @@ SERVICE_PAGES = [
     {
         "slug": "mobile-detailing",
         "name": "Mobile Detailing",
-        "price_from": "$89",
+        "price_from": "$80",
         "h1": "Mobile Auto Detailing — Chula Vista & South San Diego",
         "tagline": "We come to you. Self-contained. No hose, no outlet, no mess.",
         "keywords": "mobile detailing chula vista, mobile car detailing san diego, mobile auto detailing near me, south bay mobile detailing",
-        "description": "Mobile auto detailing in Chula Vista and the South Bay. Self-contained with water and power. Mini Detail from $89, Full Detail $279. (619) 341-0016.",
+        "description": "Mobile auto detailing in Chula Vista and the South Bay. Self-contained with water and power. Level 1 Detail $80, Level 4 up to $500. (619) 341-0016.",
         "intro": "Mobile detailing means we bring the shop to your driveway, office, or jobsite. Our rig carries a 40-gallon water tank, a 3,500-watt generator, and every tool and chemistry we need to detail a car to shop-level standards. You park, we show up, you get a detailed car without ever leaving home.",
         "benefits": [
             ("Zero driving for you", "Stay home, stay at work, stay on the golf course. We come to you."),
@@ -327,11 +321,11 @@ SERVICE_PAGES = [
             ("Walk-Around + Pay", "We inspect the finished vehicle with you before accepting payment."),
         ],
         "pricing_rows": [
-            ("Mini Detail", "$89", "Hand wash, vacuum, windows, tire dressing. ~60 min."),
-            ("Full Interior", "$179", "Deep vacuum, shampoo, leather, UV protect. 2-3 hrs."),
-            ("Full Exterior", "$169", "Hand wash, clay bar, wheels, sealant. 2-3 hrs."),
-            ("The Works — In + Out", "$279", "Full interior AND exterior. Our most popular. 4-5 hrs."),
-            ("Monthly Maintenance", "$149/mo", "2 mini details per month. Best value for daily drivers."),
+            ("Level 1 Detail", "$80", "Monthly clients / good-condition vehicles. Interior vacuum + wipe down, exterior hand wash, wheels, tire shine. 1.5 hr."),
+            ("Level 2 Exterior Detail", "$150", "Exterior wash, clay bar treatment, wheels, fenders, wax / paint sealant for 3-6 months protection. 1.5 hr."),
+            ("Level 2 Interior + Exterior", "$150", "Interior vacuum + wipe down + door jams + A/C vents. Exterior contact wash, wheels, windows. 2 hr."),
+            ("Level 3 Interior + Exterior", "$250 / $275 / $300", "Adds shampoo seats, leather scrub & condition, shampoo carpets, vinyl conditioning. Car / mid / full-size. 2 hr."),
+            ("Level 4 Interior + Exterior", "$400 / $500", "Top-tier deep clean. Shampoo seats + carpets, deep vacuum, steam clean, trim shine, interior scent, exterior wax, clay bar. Mid / full-size. 3 hr."),
         ],
         "faq": [
             ("What do you need from me at my location?",
@@ -350,85 +344,42 @@ SERVICE_PAGES = [
         ],
     },
     {
-        "slug": "headlight-restoration",
-        "name": "Headlight Restoration",
-        "price_from": "$99 / pair",
-        "h1": "Mobile Headlight Restoration in Chula Vista",
-        "tagline": "Cloudy headlights? Clear + UV-sealed in 45 minutes.",
-        "keywords": "headlight restoration chula vista, cloudy headlight repair san diego, headlight restoration near me",
-        "description": "Mobile headlight restoration in Chula Vista. Sanded, polished, UV-sealed in 45 min. $99/pair. Improves nighttime visibility and resale value.",
-        "intro": "Oxidized, yellowed, or cloudy headlights don't just look bad — they reduce nighttime visibility by up to 80%. Our mobile restoration service sands away the damage, polishes the plastic clear, and seals with a UV-blocking coating so the results last.",
-        "benefits": [
-            ("Clearer vision at night", "Restored headlights throw significantly more light on dark roads. Safer driving, period."),
-            ("Massive curb appeal", "Headlights are the first thing people notice on a car. Clear lenses shave years off how old it looks."),
-            ("Cheaper than replacement", "OEM headlight assemblies run $300-$1,500+. A restoration is $99/pair and lasts 1-3 years with sealer."),
-            ("Mobile, 45 minutes", "We come to you. You can work or relax while we do it."),
-            ("UV sealer included", "Most shops skip the UV seal — the lenses re-yellow in months. We include it on every job."),
-        ],
-        "process": [
-            ("Tape + Mask", "We protect surrounding paint with automotive tape."),
-            ("Wet Sand (3 grits)", "Progressive wet sanding removes the oxidized layer."),
-            ("Polish to Clarity", "Machine polish restores optical clarity."),
-            ("UV Seal Coating", "Final UV-blocking sealer applied — the part most shops skip."),
-        ],
-        "pricing_rows": [
-            ("Headlight Restoration (pair)", "$99", "Both headlights, sanded + polished + sealed. ~45 min."),
-            ("Single Headlight", "$59", "One headlight if only one is cloudy."),
-            ("Add to Full Detail", "+$79", "Discounted when bundled with a Full Detail or The Works."),
-        ],
-        "faq": [
-            ("How long does the restoration last?",
-             "With the UV sealer, clear for 1-3 years depending on sun exposure and parking situation. Garaged vehicles go longer."),
-            ("Can oxidized headlights really reduce visibility that much?",
-             "Yes. AAA studies show heavy oxidation can cut headlight output by over 80%. That's a major safety issue, especially on the I-805 at night."),
-            ("Does restoration work on severely damaged lenses?",
-             "If the damage is internal (water intrusion, cracks) we can't fix it — replacement is needed. But if it's the outer plastic layer that's cloudy or yellow, restoration works."),
-            ("Will this pass smog / inspection?",
-             "Clear headlights won't affect smog. They will help pass any visibility-related inspection."),
-        ],
-        "also_see": [("mobile-detailing", "Mobile Detailing"), ("paint-correction", "Paint Correction"), ("ceramic-coating", "Ceramic Coating")],
-        "photos": [
-            ("photos/accord-paint-headlight-before.jpg?v=3", "Honda Accord with oxidized, cloudy headlights before restoration", "BEFORE — cloudy headlights"),
-            ("photos/accord-paint-headlight-after.jpg?v=3", "Same Honda Accord after headlight restoration — clear and UV-sealed", "AFTER — clear and UV-sealed"),
-        ],
-    },
-    {
         "slug": "interior-detail",
         "name": "Interior Detail",
-        "price_from": "$179",
-        "h1": "Full Interior Car Detail — Mobile, in Chula Vista",
-        "tagline": "Deep clean, shampoo, condition, protect. Pet hair, stains, odors — gone.",
-        "keywords": "interior car detailing chula vista, car interior cleaning san diego, upholstery shampoo, pet hair removal car",
-        "description": "Full interior car detailing at your location in Chula Vista. Deep vacuum, upholstery shampoo, leather condition, UV protect. From $179.",
-        "intro": "A Full Interior Detail is the reset button for your car's interior. We vacuum every crevice, extract upholstery, shampoo carpets, condition leather, deodorize, UV-protect trim, and polish glass. Whether it's kid-juice, pet hair, or years of accumulated road dust, we handle it.",
+        "price_from": "$150",
+        "h1": "Mobile Interior Car Detail — Chula Vista",
+        "tagline": "Levels 2, 3, and 4 cover everything from a quick reset to full deep clean.",
+        "keywords": "interior car detailing chula vista, car interior cleaning san diego, upholstery shampoo, interior detail near me",
+        "description": "Mobile interior car detailing in Chula Vista. Level 2 In+Ex $150, Level 3 from $250, Level 4 from $400. Vacuum, shampoo, leather, condition, steam clean.",
+        "intro": "Reflection Detailing's interior service ladders from a quick Level 2 reset all the way up to a deep Level 4 with steam cleaning, seat and carpet shampoo, and an interior scent treatment. Pick the level that matches how much restoration the interior needs — or text us a photo and we'll recommend.",
         "benefits": [
-            ("Hot-water extraction", "Our extractors pull dirt and stains out of fabric at depth — not just surface wipe-down."),
-            ("Leather-safe chemistry", "pH-balanced cleaners and conditioners keep leather supple and UV-protected."),
-            ("Pet hair removal", "Specialized rubber extractors for embedded hair. $40 add-on when needed."),
-            ("Odor neutralization", "Enzymatic treatments break down odor molecules, not just mask them."),
-            ("Stain treatment", "Coffee, juice, ink, makeup — most stains come out with the right chemistry."),
+            ("Level 2 — quick reset", "Vacuum + wipe down, door jams, door seals, A/C vents. Pairs with exterior wash. Best for clean interiors that just need a refresh."),
+            ("Level 3 — deep clean", "Adds shampoo seats (scrub + condition for leather), shampoo carpets, vinyl conditioning. The right choice for most family vehicles."),
+            ("Level 4 — full restoration", "Everything in Level 3 plus deep vacuum, deep interior cleaning, steam cleaning where needed, trim shine, and interior scent."),
+            ("Real chemistry", "Hot-water extraction, pH-balanced cleaners and conditioners, enzymatic treatments for odor. No surface-only wipe-down."),
+            ("Pet hair + tough stains", "Specialized extractors and steam handle pet hair and most stains. Excessively dirty or biohazard cases may carry extra charges."),
         ],
         "process": [
-            ("Full Vacuum", "Every crevice, under seats, air vents, trunk. We go everywhere."),
-            ("Shampoo + Extract", "Carpet and upholstery deep-cleaned with hot water extraction."),
-            ("Leather / Vinyl / Plastic", "Each surface cleaned with appropriate chemistry, then conditioned and UV-protected."),
-            ("Glass + Finish", "Interior glass streak-free. Dash dressed. Final inspection."),
+            ("Pick a Level", "Level 2 ($150 Int+Ext), Level 3 ($250-$300), or Level 4 ($400-$500). Not sure? Text Angel a photo."),
+            ("Vacuum + Inspect", "Deep vacuum every crevice. Identify problem areas (stains, embedded hair, sticky residue)."),
+            ("Shampoo + Condition", "Level 3 and Level 4 include seat and carpet shampoo, leather scrub and condition, vinyl conditioning."),
+            ("Steam + Detail (Level 4)", "Steam cleaning where needed, trim shine, interior scent treatment, final wipe-down and glass."),
+            ("Walk-Around + Pay", "We finish, you inspect, you pay. Satisfaction guaranteed."),
         ],
         "pricing_rows": [
-            ("Full Interior Detail", "$179", "Sedan/coupe base. 2-3 hours."),
-            ("Pet Hair Removal", "+$40", "Specialized extraction for embedded pet hair."),
-            ("Odor Treatment", "+$49", "Enzymatic deep treatment for persistent odors."),
-            ("Child Seat Removal + Clean", "+$29", "We'll uninstall, clean under, and reinstall child seats."),
+            ("Level 2 Interior + Exterior", "$150", "Vacuum + wipe down + door jams + A/C vents, plus exterior contact wash, wheels, windows. 2 hr."),
+            ("Level 3 Interior + Exterior", "$250 / $275 / $300", "Adds seat shampoo + leather scrub & condition, carpet shampoo, vinyl conditioning. Car / mid / full-size. 2 hr."),
+            ("Level 4 Interior + Exterior", "$400 / $500", "Top tier. Deep vacuum, deep interior clean, steam cleaning, trim shine, interior scent, exterior wax. Mid / full-size. 3 hr."),
         ],
         "faq": [
             ("Will shampooing make my carpets wet for days?",
-             "No. Our hot-water extractors remove most of the moisture on pass. Interior is usually dry enough to sit in within 1-2 hours. Fully dry within 4-6."),
+             "No. Our hot-water extractors remove most of the moisture in one pass. Interior is usually dry enough to sit in within 1-2 hours, and fully dry in 4-6."),
             ("Can you get rid of pet smell?",
-             "Usually yes. Our enzymatic treatments break down the proteins that cause odor. Severe cases (urine, skunk) may need a 2-visit process."),
+             "Usually yes. Level 4 includes steam cleaning and an interior scent treatment that handles most odor. Severe cases (urine, skunk, smoke) may need a 2-visit process — text us first."),
             ("How much pet hair is too much?",
-             "We've seen it all. As long as there's fabric underneath, we can extract the hair."),
-            ("Do you clean child seats?",
-             "We clean around them. If you want them removed for deeper access, it's a $29 add-on — we uninstall, clean, and reinstall properly."),
+             "We've seen it all. Level 3 and Level 4 handle embedded pet hair through shampoo + extraction. The job may take longer for heavily-haired vehicles."),
+            ("How do I pick a level?",
+             "Level 2 if the interior is fairly clean and just needs a touch-up. Level 3 if seats and carpets need shampoo. Level 4 if it's been a year+ since a deep clean, or there are heavy stains or odors."),
         ],
         "also_see": [("mobile-detailing", "Mobile Detailing"), ("paint-correction", "Paint Correction"), ("ceramic-coating", "Ceramic Coating")],
         "photos": [
@@ -828,7 +779,6 @@ def render_city_page(data):
       <a href="../ceramic-coating/" class="block border border-slate-200 rounded-xl p-5 hover:border-accent"><p class="font-bold">Ceramic Coating</p><p class="text-sm text-slate-600 mt-1">IGL Certified · from $449</p></a>
       <a href="../paint-correction/" class="block border border-slate-200 rounded-xl p-5 hover:border-accent"><p class="font-bold">Paint Correction</p><p class="text-sm text-slate-600 mt-1">HTL Certified · from $499</p></a>
       <a href="../interior-detail/" class="block border border-slate-200 rounded-xl p-5 hover:border-accent"><p class="font-bold">Interior Detail</p><p class="text-sm text-slate-600 mt-1">From $179</p></a>
-      <a href="../headlight-restoration/" class="block border border-slate-200 rounded-xl p-5 hover:border-accent"><p class="font-bold">Headlight Restoration</p><p class="text-sm text-slate-600 mt-1">$99 / pair</p></a>
       <a href="../pricing/" class="block border border-slate-200 rounded-xl p-5 hover:border-accent"><p class="font-bold">See All Pricing</p><p class="text-sm text-slate-600 mt-1">Transparent rates →</p></a>
     </div>
   </section>
@@ -856,21 +806,15 @@ def render_pricing_page():
     slug = "pricing"
     breadcrumbs_data = [("Home", ""), ("Pricing", slug)]
     rows = [
-        ("Mini Detail", "$89", "Hand wash, vacuum, windows, tire dressing. ~60 min."),
-        ("Full Interior Detail", "$179", "Deep vacuum, shampoo, leather, UV protect. 2-3 hrs."),
-        ("Full Exterior Detail", "$169", "Hand wash, clay bar, wheels, sealant. 2-3 hrs."),
-        ("The Works — In + Out", "$279", "Complete interior + exterior. 4-5 hrs. Most popular."),
-        ("Paint Correction — 1-step", "$499+", "Removes light-to-moderate swirls. HTL Certified."),
-        ("Paint Correction — 2-step", "$749+", "Compound + polish. 80-95% defect removal."),
-        ("Paint Correction — 3-step", "$999+", "Show-car level. Compound + polish + finishing."),
-        ("Ceramic Coating — 2-year", "$449+", "IGL Certified. Graphene ceramic. Hydrophobic."),
-        ("Ceramic Coating — 5-year", "$849+", "IGL Certified. Premium graphene + correction."),
-        ("Ceramic Coating — 9-year", "$1,499+", "IGL flagship coating with warranty documentation."),
-        ("Headlight Restoration", "$99 / pair", "Sand + polish + UV seal. 45 min."),
-        ("Pet Hair Removal", "+$40", "Specialized extraction. Adds to any interior package."),
-        ("Odor Treatment", "+$49", "Enzymatic deep odor neutralization."),
-        ("Monthly Maintenance Plan", "$149/mo+", "Recurring. Save ~$30/mo vs one-off pricing."),
-        ("Custom / Fleet / RV Quote", "Text", "Text (619) 341-0016 with photos for tailored quote."),
+        ("Level 1 Detail", "$80", "1 hr 30 min. Monthly clients / good-condition vehicles. Vacuum + wipe down, door jams, A/C vents, steering wheel, console. Hand wash, wheels, tire shine."),
+        ("Level 2 Exterior Detail", "$150", "1 hr 30 min. Exterior wash, deep wheel + fender clean, fender dressing, clay bar treatment, wax/paint sealant for 3-6 months."),
+        ("Level 2 Interior + Exterior", "$150", "2 hr. Interior vacuum + wipe down + door jams + seals + A/C vents. Exterior contact wash + wheels + wheel wells + tire shine + windows."),
+        ("Level 3 Interior + Exterior", "$250 / $275 / $300", "2 hr. Everything in Level 2 plus shampoo seats + leather scrub & condition, shampoo carpets, vinyl conditioning. Car / midsize / full-size pricing."),
+        ("Level 4 Interior + Exterior", "$400 / $500", "3 hr. Top tier: shampoo seats + carpets, deep vacuum, deep interior clean, steam clean, trim shine, interior scent, exterior wax/sealant, clay bar. Midsize / full-size."),
+        ("Paint Correction Level 1", "$450", "3 hr. Polishing only — removes up to half the paint defects. HTL Detailing Certified."),
+        ("Paint Correction Level 2", "$875", "6 hr. Medium-to-heavy compound + refining polish. Removes medium-to-heavy defects. HTL Certified."),
+        ("Ceramic Coating (IGL)", "$650", "7 hr. Professional IGL Ceramic Coating application. IGL Coatings Certified Installer."),
+        ("Custom / Fleet / RV Quote", "Text Angel", "Text (619) 341-0016 with photos for a tailored quote on RVs, boats, motorcycles, lifted trucks, or fleet accounts."),
     ]
     rows_html = "\n".join(
         f'<tr class="border-b border-slate-100 {"bg-slate-50" if i%2 else ""}"><td class="p-4 font-bold">{a}</td><td class="p-4 text-accent font-black whitespace-nowrap">{b}</td><td class="p-4 text-slate-700 text-sm">{c}</td></tr>'
@@ -878,7 +822,7 @@ def render_pricing_page():
     )
     html = f"""{common_head(
         title="Detailing Pricing in Chula Vista | Reflection Detailing",
-        description="Transparent mobile detailing pricing in Chula Vista. Mini Detail $89, Full Detail $279, Ceramic Coating from $449, Paint Correction from $499. No travel fee.",
+        description="Transparent mobile detailing pricing in Chula Vista. Level 1 Detail $80, Level 4 up to $500, Ceramic Coating (IGL) $650, Paint Correction Level 1 $450. No travel fee.",
         canonical_path=slug,
         keywords="detailing prices chula vista, mobile detailing cost san diego, how much does detailing cost"
     )}
@@ -1090,7 +1034,6 @@ def render_sitemap():
         ("ceramic-coating/", 0.9),
         ("paint-correction/", 0.9),
         ("mobile-detailing/", 0.9),
-        ("headlight-restoration/", 0.8),
         ("interior-detail/", 0.8),
         ("chula-vista/", 0.9),
         ("eastlake/", 0.8),
@@ -1151,29 +1094,30 @@ def render_llms_txt():
 ## Service area (no travel fee)
 Chula Vista, Bonita, Eastlake, Otay Ranch, National City, Imperial Beach, Coronado, San Diego, Spring Valley, La Mesa, Lemon Grove.
 
-## Services & pricing (sedan/coupe base)
-- Mini Detail: $89
-- Full Interior Detail: $179
-- Full Exterior Detail: $169
-- The Works (Interior + Exterior): $279
-- Paint Correction (1-step): $499+ | 2-step: $749+ | 3-step: $999+
-- Ceramic Coating: 2-year $449+ | 5-year $849+ | 9-year $1,499+
-- Headlight Restoration: $99 / pair
-- Pet Hair Removal: +$40
-- Monthly Maintenance: from $149/mo
+## Services & pricing
+Main Services:
+- Level 1 Detail: $80 (1.5 hr) — monthly clients / good-condition vehicles. Vacuum + wipe down, door jams, A/C vents, steering wheel, console. Hand wash, wheels, tire shine.
+- Level 2 Exterior Detail: $150 (1.5 hr) — exterior wash + clay bar + wax/sealant for 3-6 months protection.
+- Level 2 Interior + Exterior Detail: $150 (2 hr) — interior vacuum + wipe down + door jams + seals + A/C vents; exterior contact wash + wheels + windows.
+- Level 3 Interior + Exterior Detail: $250 car / $275 midsize / $300 full-size (2 hr) — Level 2 plus shampoo seats + leather scrub & condition, shampoo carpets, vinyl conditioning.
+- Level 4 Interior + Exterior Detail: $400 midsize / $500 full-size (3 hr) — top tier. Shampoo seats + carpets, deep vacuum, deep interior clean, steam cleaning, trim shine, interior scent, exterior wax/sealant, clay bar.
 
-SUVs add $40. Full-size trucks and vans add $60-$80. 3-row vehicles add $80-$100.
+Ceramic Coatings & Paint Correction:
+- Paint Correction Level 1: $450 (3 hr) — polishing only, removes up to half the paint defects.
+- Paint Correction Level 2: $875 (6 hr) — medium-to-heavy compound + refining polish, removes medium-to-heavy defects.
+- Ceramic Coating: $650 (7 hr) — professional IGL Ceramic Coating application.
+
+Note: excessively dirty cars, bugs, tar, biohazard cleanup may carry extra charges. RVs, boats, motorcycles, lifted trucks, and fleet accounts: text (619) 341-0016 with photos for a custom quote.
 
 ## Certifications
 - IGL Coatings Certified Installer (ceramic coating — paint, windows, wheels, trim, leather)
 - HTL Detailing Certified (paint correction)
 
 ## Key pages
-- [Ceramic Coating]({BASE_URL}/ceramic-coating/): IGL-certified ceramic coating installation
-- [Paint Correction]({BASE_URL}/paint-correction/): HTL-certified 1-step, 2-step, 3-step machine polishing
-- [Mobile Detailing]({BASE_URL}/mobile-detailing/): Self-contained mobile detailing service
-- [Headlight Restoration]({BASE_URL}/headlight-restoration/): Cloudy headlight repair
-- [Interior Detail]({BASE_URL}/interior-detail/): Full interior cleaning and protection
+- [Ceramic Coating]({BASE_URL}/ceramic-coating/): IGL Coatings Certified ceramic coating installation — $650
+- [Paint Correction]({BASE_URL}/paint-correction/): HTL Detailing Certified — Level 1 $450, Level 2 $875
+- [Mobile Detailing]({BASE_URL}/mobile-detailing/): All five service levels — $80 to $500
+- [Interior Detail]({BASE_URL}/interior-detail/): Level 2, 3, and 4 interior service tiers
 - [Pricing]({BASE_URL}/pricing/): Complete price list
 - [Learn]({BASE_URL}/learn/): Detailing guides
 - [Chula Vista]({BASE_URL}/chula-vista/): Primary service area
@@ -1194,13 +1138,13 @@ SUVs add $40. Full-size trucks and vans add $60-$80. 3-row vehicles add $80-$100
 - [How often to detail in San Diego]({BASE_URL}/learn/how-often-should-you-detail-car-san-diego/)
 
 ## Frequently asked
-- How much does mobile detailing cost in Chula Vista? Mini Detail starts at $89, Full Detail $279, Ceramic Coating from $449.
+- How much does mobile detailing cost in Chula Vista? Level 1 Detail starts at $80, Level 4 up to $500, Ceramic Coating $650, Paint Correction Level 1 $450.
 - Do you come to my location? Yes — 100% mobile, self-contained, no travel fee in South Bay.
 - Are you certified? Yes — IGL Coatings Certified Installer and HTL Detailing Certified.
-- How long does it take? Mini Detail 60 min, Full Detail 4-5 hrs, Ceramic Coating 6-8 hrs.
+- How long does it take? Level 1 1.5 hr, Level 4 3 hr, Ceramic Coating 7 hr.
 - What payment methods? Credit/debit, Apple Pay, Google Pay, Zelle, Venmo, Cash App, cash.
 
-Last updated: 2026-04-24
+Last updated: 2026-04-25
 """
     with open(os.path.join(ROOT, "llms.txt"), "w") as f:
         f.write(txt)
