@@ -20,7 +20,7 @@ BRAND = {
   "lat": 32.6252,
   "lon": -116.993,
   "website": "https://mrhermanns.github.io/reflection-detailing",
-  "setmore": "https://reflectiondetailingllc.setmore.com",
+  "setmore": "https://app.urable.com/virtual-shop/BpN0zT06GUeMDSgxJJ93",
   "owner": "Angel",
 }
 
@@ -1143,7 +1143,7 @@ Sitemap: {base}/sitemap.xml
 - Location: Chula Vista, CA 91913
 - Phone: (619) 341-0016
 - Website: {base}/
-- Booking: https://reflectiondetailingllc.setmore.com
+- Booking: https://app.urable.com/virtual-shop/BpN0zT06GUeMDSgxJJ93
 - Rating: 5.0 on Google (4 reviews as of April 2026)
 - Service model: 100% mobile — fully self-contained with water tank and generator
 - Service area: Chula Vista, Bonita, Eastlake, Otay Ranch, National City, Imperial Beach, Coronado, San Diego, Spring Valley, La Mesa

@@ -14,7 +14,7 @@ BASE_URL = "https://reflectiondetailingsd.com"
 BRAND = "Reflection Detailing"
 PHONE_DISPLAY = "(619) 341-0016"
 PHONE_TEL = "+16193410016"
-SETMORE_URL = "https://reflectiondetailingllc.setmore.com"
+BOOKING_URL = "https://app.urable.com/virtual-shop/BpN0zT06GUeMDSgxJJ93"
 CITY = "Chula Vista"
 
 # ---------------- Shared fragments ----------------
@@ -133,7 +133,7 @@ def header_html(depth=1):
       <a href="{rel}#faq" class="hover:text-accent">FAQ</a>
       <a href="{rel}#reviews" class="hover:text-accent">Reviews</a>
     </nav>
-    <a href="{SETMORE_URL}" target="_blank" rel="noopener" class="bg-accent text-ink font-bold px-4 py-2 rounded-lg hover:opacity-90 text-sm">Book</a>
+    <a href="{BOOKING_URL}" target="_blank" rel="noopener" class="bg-accent text-ink font-bold px-4 py-2 rounded-lg hover:opacity-90 text-sm">Book</a>
   </div>
 </header>"""
 
@@ -143,7 +143,7 @@ def cta_strip():
     <h2 class="text-2xl md:text-3xl font-black mb-3">Ready to book?</h2>
     <p class="text-slate-300 mb-6">Mobile service across Chula Vista and South San Diego. Self-contained. Satisfaction guaranteed.</p>
     <div class="flex flex-col sm:flex-row gap-3 justify-center">
-      <a href="{SETMORE_URL}" target="_blank" rel="noopener" class="bg-accent text-ink font-bold px-6 py-3 rounded-lg hover:opacity-90">Book Online</a>
+      <a href="{BOOKING_URL}" target="_blank" rel="noopener" class="bg-accent text-ink font-bold px-6 py-3 rounded-lg hover:opacity-90">Book Online</a>
       <a href="sms:{PHONE_TEL}" class="bg-white/10 border border-white/30 text-white font-bold px-6 py-3 rounded-lg hover:bg-white/20">Text {PHONE_DISPLAY}</a>
     </div>
   </div>
@@ -632,7 +632,7 @@ def render_service_page(data):
     <h1 class="text-3xl md:text-5xl font-black leading-tight mb-5">{data['h1']}</h1>
     <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-8">{data['intro']}</p>
     <div class="flex flex-col sm:flex-row gap-3 justify-center">
-      <a href="{SETMORE_URL}" target="_blank" rel="noopener" class="bg-accent text-ink font-bold px-6 py-3 rounded-lg hover:opacity-90">Book Now — from {data['price_from']}</a>
+      <a href="{BOOKING_URL}" target="_blank" rel="noopener" class="bg-accent text-ink font-bold px-6 py-3 rounded-lg hover:opacity-90">Book Now — from {data['price_from']}</a>
       <a href="tel:{PHONE_TEL}" class="bg-white/10 border border-white/30 text-white font-bold px-6 py-3 rounded-lg hover:bg-white/20">Call {PHONE_DISPLAY}</a>
     </div>
   </div>
@@ -750,7 +750,7 @@ def render_city_page(data):
     <h1 class="text-3xl md:text-5xl font-black leading-tight mb-5">{data['h1']}</h1>
     <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-8">{data['intro']}</p>
     <div class="flex flex-col sm:flex-row gap-3 justify-center">
-      <a href="{SETMORE_URL}" target="_blank" rel="noopener" class="bg-accent text-ink font-bold px-6 py-3 rounded-lg hover:opacity-90">Book a Detail</a>
+      <a href="{BOOKING_URL}" target="_blank" rel="noopener" class="bg-accent text-ink font-bold px-6 py-3 rounded-lg hover:opacity-90">Book a Detail</a>
       <a href="tel:{PHONE_TEL}" class="bg-white/10 border border-white/30 text-white font-bold px-6 py-3 rounded-lg hover:bg-white/20">Call {PHONE_DISPLAY}</a>
     </div>
   </div>
@@ -1087,7 +1087,7 @@ def render_llms_txt():
 - Phone: (619) 341-0016
 - Location: Chula Vista, CA 91913
 - Website: {BASE_URL}/
-- Booking: {SETMORE_URL}
+- Booking: {BOOKING_URL}
 - Rating: 5.0 stars on Google
 - Hours: Mon 9-5, Tue-Sat 7-6, Sun 7-2
 
