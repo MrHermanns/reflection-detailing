@@ -31,6 +31,25 @@
 <style>
   html { scroll-behavior: smooth; }
 </style>
+<!-- Google tag (gtag.js) — Google Ads conversion tracking -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18018108598"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18018108598');
+  // Conversion events: booking clicks (Urable), phone clicks, SMS clicks
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a[href]');
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('urable.com') !== -1) {
+      gtag('event', 'conversion', {'send_to': 'AW-18018108598/GgSKCOvxy80cELaJ2o9D'});
+    } else if (href.indexOf('tel:') === 0 || href.indexOf('sms:') === 0) {
+      gtag('event', 'conversion', {'send_to': 'AW-18018108598/sxy2CO7xy80cELaJ2o9D'});
+    }
+  }, true);
+</script>
 
 <script type="application/ld+json">
 {
