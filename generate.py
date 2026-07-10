@@ -95,6 +95,12 @@ def local_business_schema():
     { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "07:00", "closes": "14:00" }
   ],
   "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "4" },
+  "sameAs": [
+    "https://www.google.com/maps/place/ReflectionDetailingLLC/@32.6251602,-116.9930442,17z/data=!4m6!3m5!1s0x80d94fa67ffea773:0xc1b49d6ca44d5c97!8m2!3d32.6251602!4d-116.9930442",
+    "https://www.yelp.com/biz/reflection-detailing-chula-vista-6",
+    "https://www.instagram.com/reflectiondetailingsd/",
+    "https://www.facebook.com/ReflectionDetailingllc"
+  ],
   "paymentAccepted": "Cash, Credit Card, Debit Card, Apple Pay, Google Pay, Zelle, Venmo",
   "hasCredential": [
     { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "IGL Coatings Certified Installer", "recognizedBy": { "@type": "Organization", "name": "IGL Coatings" } },
@@ -1109,6 +1115,9 @@ def render_llms_txt():
 - Booking: {BOOKING_URL}
 - Rating: 5.0 stars on Google
 - Hours: Mon 9-5, Tue-Sat 7-6, Sun 7-2
+- Yelp: https://www.yelp.com/biz/reflection-detailing-chula-vista-6
+- Instagram: https://www.instagram.com/reflectiondetailingsd/
+- Facebook: https://www.facebook.com/ReflectionDetailingllc
 
 ## Service area (no travel fee)
 Chula Vista, Bonita, Eastlake, Otay Ranch, National City, Imperial Beach, Coronado, San Diego, Spring Valley, La Mesa, Lemon Grove.
