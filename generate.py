@@ -805,9 +805,9 @@ def render_city_page(data):
     <h2 class="text-2xl md:text-3xl font-black mb-6">Services available in {data['name']}</h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
       <a href="../mobile-detailing/" class="block border border-slate-200 rounded-xl p-5 hover:border-accent"><p class="font-bold">Mobile Detailing</p><p class="text-sm text-slate-600 mt-1">From $55</p></a>
-      <a href="../ceramic-coating/" class="block border border-slate-200 rounded-xl p-5 hover:border-accent"><p class="font-bold">Ceramic Coating</p><p class="text-sm text-slate-600 mt-1">IGL Certified · from $449</p></a>
-      <a href="../paint-correction/" class="block border border-slate-200 rounded-xl p-5 hover:border-accent"><p class="font-bold">Paint Correction</p><p class="text-sm text-slate-600 mt-1">HTL Certified · from $499</p></a>
-      <a href="../interior-detail/" class="block border border-slate-200 rounded-xl p-5 hover:border-accent"><p class="font-bold">Interior Detail</p><p class="text-sm text-slate-600 mt-1">From $179</p></a>
+      <a href="../ceramic-coating/" class="block border border-slate-200 rounded-xl p-5 hover:border-accent"><p class="font-bold">Ceramic Coating</p><p class="text-sm text-slate-600 mt-1">IGL Certified · from $550</p></a>
+      <a href="../paint-correction/" class="block border border-slate-200 rounded-xl p-5 hover:border-accent"><p class="font-bold">Paint Correction</p><p class="text-sm text-slate-600 mt-1">HTL Certified · from $285</p></a>
+      <a href="../interior-detail/" class="block border border-slate-200 rounded-xl p-5 hover:border-accent"><p class="font-bold">Interior Detail</p><p class="text-sm text-slate-600 mt-1">From $215</p></a>
       <a href="../pricing/" class="block border border-slate-200 rounded-xl p-5 hover:border-accent"><p class="font-bold">See All Pricing</p><p class="text-sm text-slate-600 mt-1">Transparent rates →</p></a>
     </div>
   </section>
@@ -908,7 +908,7 @@ def render_learn_hub():
              ("Wax — 1 to 3 months", "Carnauba-based products. Warm, deep shine. Needs reapplication every 1-3 months depending on climate and washing. Best for enthusiasts who love the weekend ritual."),
              ("Sealant — 3 to 6 months", "Synthetic polymer-based. Longer-lasting than wax, easier to apply. Good middle option for budget-conscious owners."),
              ("Ceramic Coating — 2 to 9 years", "Silica (SiO2) or graphene-based. Forms a semi-permanent bond with clear coat. Requires professional application for warranty coverage. Outperforms wax and sealant on durability, UV resistance, and chemical resistance."),
-             ("Real cost math", "Wax: $100/yr in product + 20 hours of your time. 5-year ceramic at $849: about $170/yr, zero wax purchases, 2-3 hours per wash saved. Ceramic wins on any time-value analysis."),
+             ("Real cost math", "Wax: $100/yr in product plus 20 hours of your time. Our 4-year Level 1 ceramic package on a coupe is $1,260 — about $315/yr with a full paint correction included, zero wax purchases, and 2-3 hours saved on every wash. Over the life of the coating, ceramic wins on any time-value analysis."),
          ]),
         ("how-much-does-detailing-cost-san-diego", "How Much Does a Car Detail Cost in San Diego?",
          "Market pricing breakdown for 2026 — shop vs mobile, services tier by tier, what to watch out for.",
@@ -944,7 +944,7 @@ def render_learn_hub():
              ("What PPF is good for", "Rock chips, road debris, bug-etch damage, and minor scratches — PPF takes the hit instead of your paint. Modern PPF self-heals minor scratches with heat. Best for daily drivers with long commutes, lifted trucks, anything driven on dirt roads, collector cars you want to sell in 10 years with zero chips."),
              ("What ceramic coating is good for", "UV fading, chemical etching (bird droppings, tree sap, bug splatter), water spots, staining, and everyday swirl resistance. Ceramic keeps paint looking 'wet' and makes washing dramatically easier. Best for preserving a fresh paint job, maintaining resale value, and saving time on maintenance."),
              ("What they won't do", "Ceramic coating is NOT scratch-proof. It resists minor swirls but a shopping cart will still scratch your paint through the coating. PPF is NOT bulletproof either — hard enough impacts can still damage paint underneath. Both are protection, not armor."),
-             ("Cost comparison", "PPF full-front (hood, fenders, bumper, mirrors, headlights): $1,500-$2,500. PPF full-car: $4,500-$9,000. Ceramic Coating: $449-$1,499 depending on tier. Ceramic is massively cheaper but covers different risks."),
+             ("Cost comparison", "PPF full-front (hood, fenders, bumper, mirrors, headlights): $1,500-$2,500. PPF full-car: $4,500-$9,000. Our ceramic coating packages: $550 for the 2-year, $1,260-$1,580 for the 4-year Level 1, $1,960-$2,350 for Level 2 with wheels, glass, and trim coated. Ceramic is cheaper but covers different risks."),
              ("Our recommendation", "For most South Bay daily drivers: start with a 5-year IGL ceramic coating. Add PPF to the front impact zones (hood, front bumper, fenders) if you park outside often or commute on freeways with road debris. That combination gives 80%+ of full-car PPF protection at roughly 30% of the cost."),
          ]),
         ("how-often-should-you-detail-car-san-diego", "How Often Should You Detail Your Car in San Diego?",
@@ -954,7 +954,7 @@ def render_learn_hub():
              ("Full Interior Detail — every 3-6 months", "Interior grime builds slowly but steadily — seat stains, dashboard dust, carpet tracks. A Full Interior Detail every 3-6 months resets the clock. More frequent if you have kids, pets, or commute long distances."),
              ("Full Exterior Detail — every 3-4 months", "Exterior paint accumulates bonded contaminants (rail dust, iron, tar, bug splatter) that regular washing won't remove. Every 3-4 months is the sweet spot for a full exterior with decontamination."),
              ("Paint Correction — once, then every 2-5 years", "Paint correction is a one-and-done reset. Once done, proper maintenance should extend the results for years. Most owners do a fresh correction every 2-5 years as swirls accumulate."),
-             ("Ceramic Coating — every 2-9 years (depending on tier)", "Match the ceramic tier to your ownership timeline. Keeping the car 2-3 years? A 2-year IGL coating at $449 is perfect. 5+ years? Go 5-year IGL at $849. Long-haul? 9-year IGL at $1,499."),
+             ("Ceramic Coating — every 2-9 years (depending on tier)", "Match the ceramic package to your ownership timeline. Keeping the car 2-3 years? The 2-year coating at $550 is perfect. Longer than that? The Level 1 package puts down a 4-year professional coating with a one-step paint correction underneath it — $1,260 coupe, $1,450 SUV, $1,580 truck. Want the wheels, glass, trim, and lights coated too? That is Level 2, $1,960-$2,350."),
              ("Headlight Restoration — every 1-3 years", "If you live and park in the San Diego sun, plastic headlights oxidize faster than you'd think. Every 1-3 years with a UV sealer keeps them clear. Garaged cars go longer."),
              ("Adjust for how you park", "Garaged daily: everything gets the longer end of the range. Parked outside, frequent freeway driving, or coastal (IB/Coronado): everything gets the shorter end. Salt air and UV age paint 2-3x faster than sheltered storage."),
          ]),
