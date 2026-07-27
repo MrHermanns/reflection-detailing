@@ -112,7 +112,7 @@ def local_business_schema():
 def breadcrumb_schema(items):
     # items: list of (name, url_path)
     itemlist = ",\n    ".join(
-        f'{{ "@type": "ListItem", "position": {i+1}, "name": "{name}", "item": "{BASE_URL}/{path}".rstrip("/") }}'
+        f'{{ "@type": "ListItem", "position": {i+1}, "name": "{name}", "item": "{(BASE_URL + "/" + path).rstrip("/") + "/" if path else BASE_URL + "/"}" }}'
         for i, (name, path) in enumerate(items)
     )
     return f"""<script type="application/ld+json">
@@ -234,19 +234,20 @@ SERVICE_PAGES = [
     {
         "slug": "ceramic-coating",
         "name": "Ceramic Coating",
-        "price_from": "$650",
+        "price_from": "$550",
         "h1": "Mobile Ceramic Coating in Chula Vista, CA",
-        "tagline": "IGL Coatings Certified · Professional-grade ceramic application",
+        "tagline": "IGL Coatings Certified · 2-Year and 4-Year professional packages",
         "keywords": "ceramic coating chula vista, mobile ceramic coating san diego, IGL coatings installer, IGL ceramic",
-        "description": "IGL Coatings Certified mobile ceramic coating in Chula Vista, CA. Professional IGL Ceramic application. $650. 7-hour service. We come to your driveway. Call (619) 341-0016.",
-        "intro": "A ceramic coating is the strongest paint protection available short of a full PPF. We're an IGL Coatings Certified installer using professional-grade IGL Ceramic — that means the coating is applied to manufacturer spec by a trained installer. Mobile service, self-contained, anywhere in South Bay. Service runs about 7 hours on-site.",
+        "description": "IGL Coatings Certified mobile ceramic coating in Chula Vista, CA. 2-Year coating $550, 4-Year packages with paint correction from $1,260. We come to your driveway. Call (619) 341-0016.",
+        "intro": "A ceramic coating is the strongest paint protection available short of a full PPF. We're an IGL Coatings Certified installer — the coating is applied to manufacturer spec by a trained installer. Choose the 2-Year coating with full polish and decontamination prep, or step up to the Level 1 (4-year professional coating with one-step paint correction) or Level 2 (everything coated: paint, wheels, windows, trim, lights) package. Mobile service, self-contained, anywhere in South Bay.",
         "benefits": [
             ("Years of protection", "IGL ceramic coatings last 2 to 9 years depending on tier. Wax lasts 1-3 months. Do the math."),
             ("Hydrophobic shine", "Water beads up and rolls off. Dirt, mud, and road grime have nothing to grip."),
             ("UV + chemical resistance", "Protects against bird droppings, tree sap, bug splatter, and the relentless San Diego sun."),
             ("Easier washing forever", "Coated paint washes clean in half the time. No more scrubbing bonded contaminants."),
             ("Certified application", "IGL products applied by an IGL-trained installer. Uncertified shops buy generic coatings and wing it. We don't."),
-            ("Full paint prep included", "Every coating job includes wash, decontamination, clay bar, and 1-step or 2-step paint correction as needed. The coating is only as good as the paint underneath.")
+            ("Full paint prep included", "Every package includes wash and decontamination — Level 1 and Level 2 packages add a one-step paint correction (about 70% defect removal). The coating is only as good as the paint underneath."),
+            ("Maintenance program available", "We travel to you and wash the vehicle at your residence twice a month to maintain the coating. Ask about our ceramic coating guarantee.")
         ],
         "process": [
             ("Book + Prep Consult", "Text or book online. We confirm vehicle size, condition, and the right coating tier for your needs."),
@@ -256,13 +257,13 @@ SERVICE_PAGES = [
             ("Cure + Final Inspection", "Coating flashes for 20-30 minutes per panel. We walk the finished vehicle with you before leaving."),
         ],
         "pricing_rows": [
-            ("Ceramic Coating (IGL)", "$650", "Professional IGL Ceramic Coating application. 7-hour service. Can be applied with or without paint correction."),
-            ("Paint Correction Level 1 (recommended add-on)", "$450", "Polishing-only — removes up to half the paint defects. Required for best coating bond."),
-            ("Paint Correction Level 2 (heavier defects)", "$875", "Medium-to-heavy compound + polish. For paint with deeper swirl marks and oxidation."),
+            ("Ceramic Coating — 2-Year", "$550", "2-year ceramic coating with whole-vehicle polishing and full decontamination prep."),
+            ("Level 1 Ceramic — 4-Year Professional", "$1,260 / $1,450 / $1,580", "Coupe / SUV / Truck. 4-year professional-grade coating. Includes decontamination, one-step paint correction (≈70% defect removal), coating application, exterior and tires dressed. ~4 hours."),
+            ("Level 2 Ceramic — Everything Coated", "$1,960 / $2,099 / $2,350", "Coupe / SUV / Truck. All of Level 1 plus ceramic coating on the wheels, windows, exterior trim, headlights and taillights. ~8 hours."),
         ],
         "faq": [
             ("How much does a ceramic coating cost?",
-             "Our IGL Ceramic Coating is $650 for the coating application. If your paint needs correction first (most do), add Paint Correction Level 1 at $450 or Level 2 at $875 depending on how much defect removal is needed. Plan on 7 hours on-site for the coating, plus correction time."),
+             "The 2-Year Ceramic Coating is $550 and includes whole-vehicle polishing and decontamination prep. The Level 1 package — a 4-year professional coating with one-step paint correction — runs $1,260 for coupes, $1,450 for SUVs, and $1,580 for trucks. Level 2 adds coating on wheels, windows, trim, and lights: $1,960 to $2,350 depending on vehicle. If we find deeper defects during prep, we'll recommend additional correction but never charge without your approval."),
             ("Can I wash my car after a ceramic coating?",
              "Yes — and it's easier than before. Wait 7 days after application before the first wash. After that, any standard hand-wash method works. Avoid automatic car washes with rotating brushes."),
             ("Do I still need to wax after ceramic coating?",
@@ -281,14 +282,14 @@ SERVICE_PAGES = [
     {
         "slug": "paint-correction",
         "name": "Paint Correction",
-        "price_from": "$450",
+        "price_from": "$285",
         "h1": "Paint Correction in Chula Vista & South San Diego",
-        "tagline": "HTL Detailing Certified · Level 1 and Level 2 machine polishing",
+        "tagline": "HTL Detailing Certified · Polish enhancement to full correction packages",
         "keywords": "paint correction chula vista, paint correction san diego, swirl mark removal, machine polish",
-        "description": "HTL Detailing Certified paint correction in Chula Vista. Remove swirl marks, scratches, oxidation. Mobile service. Level 1 $450, Level 2 $875. (619) 341-0016.",
-        "intro": "Paint correction physically removes a micro-thin layer of clear coat to eliminate swirl marks, light scratches, water spots, and oxidation. The result is depth, clarity, and gloss that no wax or spray sealant can fake. We're HTL Detailing Certified — formal training on compound selection, pad matching, and paint-thickness-safe polishing.",
+        "description": "HTL Detailing Certified paint correction in Chula Vista. Polish-buff enhancement $285, one-step correction included in ceramic packages from $1,260. Mobile. (619) 341-0016.",
+        "intro": "Paint correction physically removes a micro-thin layer of clear coat to eliminate swirl marks, light scratches, water spots, and oxidation. The result is depth, clarity, and gloss that no wax or spray sealant can fake. We're HTL Detailing Certified — formal training on compound selection, pad matching, and paint-thickness-safe polishing. We offer correction two ways: a polish-buff paint enhancement (Level 3 Exterior Detail), or a one-step correction built into our Level 1 and Level 2 Ceramic Coating packages so the results get locked in for years.",
         "benefits": [
-            ("Visible swirl + scratch removal", "1-step corrects 60-70% of defects. 2-step handles 80-95% including deeper scratches."),
+            ("Visible swirl + scratch removal", "Our one-step correction removes about 70% of defects. Deeper scratches need multi-stage work — quoted after a paint inspection."),
             ("Paint depth restored", "Corrected paint looks wet — the difference is immediately visible in direct sunlight."),
             ("Prepped for coating", "Paint correction is REQUIRED before ceramic coating. Coating locks in defects if you skip this step."),
             ("Paint-safe process", "Certified technique and paint thickness gauges ensure we never remove more clear coat than is safe."),
@@ -302,8 +303,9 @@ SERVICE_PAGES = [
             ("Protection Applied", "Spray sealant included. Ceramic coating available as upgrade."),
         ],
         "pricing_rows": [
-            ("Paint Correction Level 1", "$450", "Polishing only — removes up to half the defects (light-to-moderate swirls, marring, oxidation). 3-hour service."),
-            ("Paint Correction Level 2", "$875", "Medium-to-heavy compound + polish refining step. Removes medium-to-heavy defects. 6-hour service."),
+            ("Polish-Buff Paint Enhancement (Level 3 Exterior Detail)", "$285", "Machine polish for gloss and light swirl reduction, on top of a full Level 2 exterior detail (clay bar, wheels, wax or sealant). 3-hour service."),
+            ("One-Step Correction + 4-Year Ceramic (Level 1 Ceramic package)", "from $1,260", "One-step paint correction (≈70% defect removal) followed by a 4-year professional ceramic coating to lock in the results. Coupe $1,260 / SUV $1,450 / Truck $1,580."),
+            ("Deeper multi-stage correction", "Quote on inspection", "Heavier defects need a paint inspection first. Text photos to (619) 341-0016 and we'll recommend honestly — never charged without your approval."),
         ],
         "faq": [
             ("How do I know if I need paint correction?",
@@ -326,11 +328,11 @@ SERVICE_PAGES = [
     {
         "slug": "mobile-detailing",
         "name": "Mobile Detailing",
-        "price_from": "$80",
+        "price_from": "$55",
         "h1": "Mobile Auto Detailing — Chula Vista & South San Diego",
         "tagline": "We come to you. Self-contained. No hose, no outlet, no mess.",
         "keywords": "mobile detailing chula vista, mobile car detailing san diego, mobile auto detailing near me, south bay mobile detailing",
-        "description": "Mobile auto detailing in Chula Vista and the South Bay. Self-contained with water and power. Level 1 Detail $80, Level 4 up to $500. (619) 341-0016.",
+        "description": "Mobile auto detailing in Chula Vista and the South Bay. Self-contained with water and power. Exterior wash $55, full details up to $510. (619) 341-0016.",
         "intro": "Mobile detailing means we bring the shop to your driveway, office, or jobsite. Our rig carries a 40-gallon water tank, a 3,500-watt generator, and every tool and chemistry we need to detail a car to shop-level standards. You park, we show up, you get a detailed car without ever leaving home.",
         "benefits": [
             ("Zero driving for you", "Stay home, stay at work, stay on the golf course. We come to you."),
@@ -346,11 +348,12 @@ SERVICE_PAGES = [
             ("Walk-Around + Pay", "We inspect the finished vehicle with you before accepting payment."),
         ],
         "pricing_rows": [
-            ("Level 1 Detail", "$80", "Monthly clients / good-condition vehicles. Interior vacuum + wipe down, exterior hand wash, wheels, tire shine. 1.5 hr."),
-            ("Level 2 Exterior Detail", "$150", "Exterior wash, clay bar treatment, wheels, fenders, wax / paint sealant for 3-6 months protection. 1.5 hr."),
-            ("Level 2 Interior + Exterior", "$150", "Interior vacuum + wipe down + door jams + A/C vents. Exterior contact wash, wheels, windows. 2 hr."),
-            ("Level 3 Interior + Exterior", "$250 / $275 / $300", "Adds shampoo seats, leather scrub & condition, shampoo carpets, vinyl conditioning. Car / mid / full-size. 2 hr."),
-            ("Level 4 Interior + Exterior", "$400 / $500", "Top-tier deep clean. Shampoo seats + carpets, deep vacuum, steam clean, trim shine, interior scent, exterior wax, clay bar. Mid / full-size. 3 hr."),
+            ("Level 1 Exterior Wash", "$55", "Hand wash, towel dry, windows, tire shine. 45 min."),
+            ("Level 2 Exterior Detail", "$169", "Deeper exterior clean: hand wash, wheels, wheel barrels, inner fender liners, clay bar, machine wax or paint sealant (your choice), windows, tire shine. 2 hr."),
+            ("Level 3 Exterior Detail", "$285", "Everything in Level 2 plus a polish-buff paint enhancement. 3 hr."),
+            ("Level 2 Exterior + Interior", "$215", "Full exterior wash plus interior vacuum, all plastics and leather cleaned, light fabric-seat shampoo, cup holders, console, A/C vents, trunk, windows in and out. 3 hr."),
+            ("Level 3 Exterior + Interior", "$285 / $321", "Adds carpet and seat shampoo with dry extraction, leather deep clean + conditioning, steam cleaning, full interior disinfect. Small-to-mid / full-size. 3.5 hr."),
+            ("Level 4 Exterior + Interior", "$425 / $510", "Everything in Level 3 plus clay bar, paint decontamination, and paint seal or wax. Small-to-mid / full-size. 5 hr."),
         ],
         "faq": [
             ("What do you need from me at my location?",
@@ -371,30 +374,31 @@ SERVICE_PAGES = [
     {
         "slug": "interior-detail",
         "name": "Interior Detail",
-        "price_from": "$150",
+        "price_from": "$215",
         "h1": "Mobile Interior Car Detail — Chula Vista",
         "tagline": "Levels 2, 3, and 4 cover everything from a quick reset to full deep clean.",
         "keywords": "interior car detailing chula vista, car interior cleaning san diego, upholstery shampoo, interior detail near me",
-        "description": "Mobile interior car detailing in Chula Vista. Level 2 In+Ex $150, Level 3 from $250, Level 4 from $400. Vacuum, shampoo, leather, condition, steam clean.",
+        "description": "Mobile interior car detailing in Chula Vista. Level 2 Ext+Int $215, Level 3 from $285, Level 4 from $425. Vacuum, shampoo, leather, condition, steam clean.",
         "intro": "Reflection Detailing's interior service ladders from a quick Level 2 reset all the way up to a deep Level 4 with steam cleaning, seat and carpet shampoo, and an interior scent treatment. Pick the level that matches how much restoration the interior needs — or text us a photo and we'll recommend.",
         "benefits": [
-            ("Level 2 — quick reset", "Vacuum + wipe down, door jams, door seals, A/C vents. Pairs with exterior wash. Best for clean interiors that just need a refresh."),
-            ("Level 3 — deep clean", "Adds shampoo seats (scrub + condition for leather), shampoo carpets, vinyl conditioning. The right choice for most family vehicles."),
-            ("Level 4 — full restoration", "Everything in Level 3 plus deep vacuum, deep interior cleaning, steam cleaning where needed, trim shine, and interior scent."),
+            ("Level 2 — the Reflection reset", "Vacuum, every plastic and leather surface cleaned, light fabric-seat shampoo, cup holders, console, glove box, trunk, A/C vents, windows in and out — plus a full exterior wash."),
+            ("Level 3 — deep clean", "Adds carpet and seat shampoo with dry extraction, leather deep cleaning + conditioning, interior conditioning treatment, steam cleaning, and a complete interior disinfect."),
+            ("Level 4 — detail + protect", "Everything in Level 3 plus exterior clay bar, paint decontamination, and a paint seal or wax on the way out."),
             ("Real chemistry", "Hot-water extraction, pH-balanced cleaners and conditioners, enzymatic treatments for odor. No surface-only wipe-down."),
             ("Pet hair + tough stains", "Specialized extractors and steam handle pet hair and most stains. Excessively dirty or biohazard cases may carry extra charges."),
         ],
         "process": [
-            ("Pick a Level", "Level 2 ($150 Int+Ext), Level 3 ($250-$300), or Level 4 ($400-$500). Not sure? Text Angel a photo."),
+            ("Pick a Level", "Level 2 ($215), Level 3 ($285-$321), or Level 4 ($425-$510) — all include the exterior. Not sure? Text Angel a photo."),
             ("Vacuum + Inspect", "Deep vacuum every crevice. Identify problem areas (stains, embedded hair, sticky residue)."),
             ("Shampoo + Condition", "Level 3 and Level 4 include seat and carpet shampoo, leather scrub and condition, vinyl conditioning."),
             ("Steam + Detail (Level 4)", "Steam cleaning where needed, trim shine, interior scent treatment, final wipe-down and glass."),
             ("Walk-Around + Pay", "We finish, you inspect, you pay. Satisfaction guaranteed."),
         ],
         "pricing_rows": [
-            ("Level 2 Interior + Exterior", "$150", "Vacuum + wipe down + door jams + A/C vents, plus exterior contact wash, wheels, windows. 2 hr."),
-            ("Level 3 Interior + Exterior", "$250 / $275 / $300", "Adds seat shampoo + leather scrub & condition, carpet shampoo, vinyl conditioning. Car / mid / full-size. 2 hr."),
-            ("Level 4 Interior + Exterior", "$400 / $500", "Top tier. Deep vacuum, deep interior clean, steam cleaning, trim shine, interior scent, exterior wax. Mid / full-size. 3 hr."),
+            ("Level 2 Exterior + Interior", "$215", "Vacuum, all plastics and leather cleaned, light fabric-seat shampoo, cup holders, console, glove box, trunk, A/C vents, windows in and out — plus full exterior wash with wheels, door jams, tire shine. 3 hr."),
+            ("Level 3 Exterior + Interior", "$285 / $321", "Adds carpet + seat shampoo with dry extraction, leather deep cleaning and conditioning, interior conditioning, steam cleaning, complete disinfect. Small-to-mid / full-size. 3.5 hr."),
+            ("Level 4 Exterior + Interior", "$425 / $510", "Everything in Level 3 plus exterior clay bar, paint decontamination, and paint seal or wax. Small-to-mid / full-size. 5 hr."),
+            ("Add-on: Interior Conditioning (leather & vinyl)", "$20", "Conditioning treatment for all plastics and leather. Add to any package that includes an interior service. 15 min."),
         ],
         "faq": [
             ("Will shampooing make my carpets wet for days?",
@@ -404,7 +408,7 @@ SERVICE_PAGES = [
             ("How much pet hair is too much?",
              "We've seen it all. Level 3 and Level 4 handle embedded pet hair through shampoo + extraction. The job may take longer for heavily-haired vehicles."),
             ("How do I pick a level?",
-             "Level 2 if the interior is fairly clean and just needs a touch-up. Level 3 if seats and carpets need shampoo. Level 4 if it's been a year+ since a deep clean, or there are heavy stains or odors."),
+             "Level 2 if the interior is fairly clean and just needs a proper reset. Level 3 if seats and carpets need shampoo, extraction, or the interior needs a disinfect. Level 4 if you want the deep interior clean plus exterior paint decontamination and protection in one visit."),
         ],
         "also_see": [("mobile-detailing", "Mobile Detailing"), ("paint-correction", "Paint Correction"), ("ceramic-coating", "Ceramic Coating")],
         "photos": [
@@ -423,7 +427,7 @@ CITY_PAGES = [
         "lat": 32.6401,
         "lng": -117.0842,
         "h1": "Mobile Auto Detailing in Chula Vista, CA",
-        "description": "Mobile auto detailing across all Chula Vista zip codes. IGL Coatings Certified. Ceramic coating, paint correction, full details. From $89. (619) 341-0016.",
+        "description": "Mobile auto detailing across all Chula Vista zip codes. IGL Coatings Certified. Ceramic coating, paint correction, full details. From $55. (619) 341-0016.",
         "keywords": "mobile detailing chula vista, car detailing chula vista 91913, ceramic coating chula vista, auto detailing near me",
         "intro": "Chula Vista is home base. Reflection Detailing operates out of Chula Vista 91913 and covers every zip code in the city with no travel fee. Whether you're in Eastlake with a new Tesla, in Otay Ranch with a family SUV, or in Third Avenue with a project car, we'll come to your driveway or office with a fully self-contained rig and detail the vehicle on-site.",
         "local_seo": [
@@ -432,7 +436,7 @@ CITY_PAGES = [
             "Parking is rarely an issue in Chula Vista; most driveways accommodate our rig.",
             "Serves all Chula Vista zip codes: 91910, 91911, 91913, 91914, 91915.",
         ],
-        "popular_services": ["The Works — Interior + Exterior", "Ceramic Coating", "Paint Correction"],
+        "popular_services": ["Level 4 Exterior + Interior Detail", "Ceramic Coating", "Paint Correction"],
     },
     {
         "slug": "eastlake",
@@ -442,7 +446,7 @@ CITY_PAGES = [
         "lat": 32.6509,
         "lng": -116.9692,
         "h1": "Mobile Detailing in Eastlake, Chula Vista",
-        "description": "Mobile auto detailing in Eastlake — Eastlake Greens, Vistas, Trails, and Hills. IGL-certified ceramic coating. Full details from $89. (619) 341-0016.",
+        "description": "Mobile auto detailing in Eastlake — Eastlake Greens, Vistas, Trails, and Hills. IGL-certified ceramic coating. Full details from $55. (619) 341-0016.",
         "keywords": "eastlake car detailing, eastlake chula vista detailer, mobile detailing eastlake, ceramic coating eastlake",
         "intro": "Eastlake is one of our busiest service areas. The community's mix of luxury vehicles, family SUVs, and enthusiast cars means we see everything from Tesla Model Ys to lifted 4Runners to show-condition exotics. Every Eastlake detail gets the same self-contained mobile setup — we pull up to your driveway or complex, set up in the designated space, and you get a showroom-clean car without leaving home.",
         "local_seo": [
@@ -450,7 +454,7 @@ CITY_PAGES = [
             "Experienced with HOA rules and gate access coordination across Eastlake communities.",
             "Frequent ceramic coating bookings from Eastlake — IGL-Certified installation means warranty-backed results.",
         ],
-        "popular_services": ["Ceramic Coating", "Paint Correction", "The Works — Interior + Exterior"],
+        "popular_services": ["Ceramic Coating", "Paint Correction", "Level 4 Exterior + Interior Detail"],
     },
     {
         "slug": "bonita",
@@ -460,7 +464,7 @@ CITY_PAGES = [
         "lat": 32.6577,
         "lng": -117.0320,
         "h1": "Mobile Car Detailing in Bonita, CA",
-        "description": "Mobile auto detailing in Bonita, CA. Ceramic coating, paint correction, full details at your door. IGL Coatings Certified. From $89. (619) 341-0016.",
+        "description": "Mobile auto detailing in Bonita, CA. Ceramic coating, paint correction, full details at your door. IGL Coatings Certified. From $55. (619) 341-0016.",
         "keywords": "bonita car detailing, bonita mobile detailer, ceramic coating bonita, paint correction bonita",
         "intro": "Bonita is home to some of the most beautiful vehicles in South Bay — and some of the most demanding owners. We handle luxury vehicles, collector cars, and everyday drivers with the same level of care. Our mobile rig means your Porsche, your G-Wagon, or your classic Camaro never leaves your garage — we bring the detail to the car.",
         "local_seo": [
@@ -469,7 +473,7 @@ CITY_PAGES = [
             "Familiar with Bonita gated communities and private estates.",
             "Bonita zip codes covered: 91902, 91908, plus neighboring Rancho Del Rey.",
         ],
-        "popular_services": ["Ceramic Coating (5-year + 9-year tiers)", "2-Step Paint Correction", "The Works — Interior + Exterior"],
+        "popular_services": ["Ceramic Coating (2-Year and 4-Year packages)", "Paint Correction + Ceramic Packages", "Level 4 Exterior + Interior Detail"],
     },
     {
         "slug": "otay-ranch",
@@ -488,7 +492,7 @@ CITY_PAGES = [
             "Experienced with Otay Ranch HOA guidelines for on-property service work.",
             "Most popular in Otay Ranch: Full Detail + Monthly Maintenance plans for family vehicles.",
         ],
-        "popular_services": ["The Works — Interior + Exterior", "Monthly Maintenance Plan", "Interior Detail (pet hair + stains)"],
+        "popular_services": ["Level 4 Exterior + Interior Detail", "Monthly Maintenance Plan", "Interior Detail (pet hair + stains)"],
     },
     {
         "slug": "coronado",
@@ -498,7 +502,7 @@ CITY_PAGES = [
         "lat": 32.6859,
         "lng": -117.1831,
         "h1": "Mobile Auto Detailing in Coronado, CA",
-        "description": "Mobile auto detailing in Coronado. Luxury and exotic experience. IGL Coatings Certified. Coastal salt-air decontamination. From $89. (619) 341-0016.",
+        "description": "Mobile auto detailing in Coronado. Luxury and exotic experience. IGL Coatings Certified. Coastal salt-air decontamination. From $55. (619) 341-0016.",
         "keywords": "coronado mobile detailing, coronado car detailer, ceramic coating coronado, luxury detailer coronado",
         "intro": "Coronado vehicles take serious abuse from the ocean air. Salt spray, sand, and sun are hard on paint and wheels — and Coronado owners tend to drive vehicles worth protecting. We bring a fully self-contained mobile rig across the bridge so your Coronado Shores condo, Coronado Cays home, or Village residence stays the service location. Every Coronado exterior detail includes extra iron decontamination to pull embedded salt deposits out of the clear coat.",
         "local_seo": [
@@ -507,7 +511,7 @@ CITY_PAGES = [
             "Service across Coronado Village, Coronado Cays, Coronado Shores, and the Coronado Cove area.",
             "Comfortable with Coronado Cays gated-community access and condo parking garages.",
         ],
-        "popular_services": ["Ceramic Coating (5-year + 9-year)", "Exterior Detail with extra decon", "Paint Correction"],
+        "popular_services": ["Ceramic Coating (2-Year and 4-Year packages)", "Exterior Detail with extra decon", "Paint Correction"],
     },
     {
         "slug": "national-city",
@@ -517,7 +521,7 @@ CITY_PAGES = [
         "lat": 32.6781,
         "lng": -117.0992,
         "h1": "Mobile Auto Detailing in National City, CA",
-        "description": "Affordable mobile auto detailing in National City. No travel fee. Full Detail from $279, Mini from $89. Fleet accounts welcome. (619) 341-0016.",
+        "description": "Affordable mobile auto detailing in National City. No travel fee. Full Detail from $279, Mini from $55. Fleet accounts welcome. (619) 341-0016.",
         "keywords": "national city mobile detailing, national city car detailer, fleet detailing national city, 91950 auto detailing",
         "intro": "National City is a regular stop on our route — busy residential streets, dense apartment complexes, and several small-fleet accounts (contractors, delivery services, auto dealers). We handle one-off details and recurring monthly maintenance in National City with the same quality. Self-contained mobile rig means we service vehicles where they sit — no need to move anything to a shop.",
         "local_seo": [
@@ -536,7 +540,7 @@ CITY_PAGES = [
         "lat": 32.5839,
         "lng": -117.1133,
         "h1": "Mobile Auto Detailing in Imperial Beach, CA",
-        "description": "Mobile auto detailing in Imperial Beach. Coastal-grade decontamination and salt protection. IGL Coatings Certified. From $89. (619) 341-0016.",
+        "description": "Mobile auto detailing in Imperial Beach. Coastal-grade decontamination and salt protection. IGL Coatings Certified. From $55. (619) 341-0016.",
         "keywords": "imperial beach mobile detailing, IB car detailer, ceramic coating imperial beach, coastal car detailer",
         "intro": "Imperial Beach vehicles live on the front lines of salt, sand, and sun. Paint oxidizes faster here than almost anywhere in the county. Our mobile service brings full coastal-grade decontamination right to your driveway in IB — iron removal, tar decon, clay bar, and optional IGL ceramic coating to block the damage from ever starting. We serve Seacoast Drive, Palm Avenue, and the Downtown IB area.",
         "local_seo": [
@@ -555,7 +559,7 @@ CITY_PAGES = [
         "lat": 32.7157,
         "lng": -117.1611,
         "h1": "Mobile Auto Detailing in San Diego, CA",
-        "description": "Mobile auto detailing across San Diego — Mission Valley, North Park, Downtown, Hillcrest, and more. IGL Coatings Certified. Self-contained. From $89.",
+        "description": "Mobile auto detailing across San Diego — Mission Valley, North Park, Downtown, Hillcrest, and more. IGL Coatings Certified. Self-contained. From $55.",
         "keywords": "san diego mobile detailing, mobile car detailing san diego, mission valley detailer, north park detailing, downtown san diego detailer",
         "intro": "We extend our mobile service from Chula Vista up into San Diego proper — Mission Valley offices, North Park homes, Downtown condos, Hillcrest residences, and beyond. The 805 and 5 corridors are regular drives for us. Every San Diego appointment gets the same fully self-contained rig, the same IGL + HTL certifications, and the same satisfaction guarantee. Metered street parking, condo garages, and office lots are all workable — we coordinate with you at booking.",
         "local_seo": [
@@ -564,7 +568,7 @@ CITY_PAGES = [
             "Office-lot bookings welcome — you work, we detail, you come out to a finished car.",
             "Same South Bay pricing applies in San Diego at no travel fee.",
         ],
-        "popular_services": ["The Works — Interior + Exterior", "Ceramic Coating", "Paint Correction"],
+        "popular_services": ["Level 4 Exterior + Interior Detail", "Ceramic Coating", "Paint Correction"],
     },
 ]
 
@@ -685,7 +689,7 @@ def render_service_page(data):
         <tbody>{pricing_rows_html}</tbody>
       </table>
     </div>
-    <p class="text-sm text-slate-500 mt-3">Base pricing shown for sedans and coupes. SUVs +$40, full-size trucks +$60-$80.</p>
+    <p class="text-sm text-slate-500 mt-3">Where two prices are shown: small-to-mid-size / full-size vehicle. Ceramic packages priced by coupe / SUV / truck. Excessive dirt, pet hair, or stains can add to the quote — we always confirm before starting.</p>
   </section>
 
   <section class="mb-16" id="faq">
@@ -800,7 +804,7 @@ def render_city_page(data):
   <section class="mb-16">
     <h2 class="text-2xl md:text-3xl font-black mb-6">Services available in {data['name']}</h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-      <a href="../mobile-detailing/" class="block border border-slate-200 rounded-xl p-5 hover:border-accent"><p class="font-bold">Mobile Detailing</p><p class="text-sm text-slate-600 mt-1">From $89</p></a>
+      <a href="../mobile-detailing/" class="block border border-slate-200 rounded-xl p-5 hover:border-accent"><p class="font-bold">Mobile Detailing</p><p class="text-sm text-slate-600 mt-1">From $55</p></a>
       <a href="../ceramic-coating/" class="block border border-slate-200 rounded-xl p-5 hover:border-accent"><p class="font-bold">Ceramic Coating</p><p class="text-sm text-slate-600 mt-1">IGL Certified · from $449</p></a>
       <a href="../paint-correction/" class="block border border-slate-200 rounded-xl p-5 hover:border-accent"><p class="font-bold">Paint Correction</p><p class="text-sm text-slate-600 mt-1">HTL Certified · from $499</p></a>
       <a href="../interior-detail/" class="block border border-slate-200 rounded-xl p-5 hover:border-accent"><p class="font-bold">Interior Detail</p><p class="text-sm text-slate-600 mt-1">From $179</p></a>
@@ -831,14 +835,21 @@ def render_pricing_page():
     slug = "pricing"
     breadcrumbs_data = [("Home", ""), ("Pricing", slug)]
     rows = [
-        ("Level 1 Detail", "$80", "1 hr 30 min. Monthly clients / good-condition vehicles. Vacuum + wipe down, door jams, A/C vents, steering wheel, console. Hand wash, wheels, tire shine."),
-        ("Level 2 Exterior Detail", "$150", "1 hr 30 min. Exterior wash, deep wheel + fender clean, fender dressing, clay bar treatment, wax/paint sealant for 3-6 months."),
-        ("Level 2 Interior + Exterior", "$150", "2 hr. Interior vacuum + wipe down + door jams + seals + A/C vents. Exterior contact wash + wheels + wheel wells + tire shine + windows."),
-        ("Level 3 Interior + Exterior", "$250 / $275 / $300", "2 hr. Everything in Level 2 plus shampoo seats + leather scrub & condition, shampoo carpets, vinyl conditioning. Car / midsize / full-size pricing."),
-        ("Level 4 Interior + Exterior", "$400 / $500", "3 hr. Top tier: shampoo seats + carpets, deep vacuum, deep interior clean, steam clean, trim shine, interior scent, exterior wax/sealant, clay bar. Midsize / full-size."),
-        ("Paint Correction Level 1", "$450", "3 hr. Polishing only — removes up to half the paint defects. HTL Detailing Certified."),
-        ("Paint Correction Level 2", "$875", "6 hr. Medium-to-heavy compound + refining polish. Removes medium-to-heavy defects. HTL Certified."),
-        ("Ceramic Coating (IGL)", "$650", "7 hr. Professional IGL Ceramic Coating application. IGL Coatings Certified Installer."),
+        ("Level 1 Exterior Wash", "$55", "45 min. Hand wash, towel dry, windows, tire shine."),
+        ("Level 2 Exterior Detail", "$169", "2 hr. Deeper exterior clean: hand wash, wheels, wheel barrels, inner fender liners, clay bar, machine wax or paint sealant (your choice), windows, tire shine."),
+        ("Level 3 Exterior Detail", "$285", "3 hr. Everything in Level 2 plus polish-buff paint enhancement. HTL Detailing Certified."),
+        ("Level 2 Exterior + Interior", "$215", "3 hr. Full exterior wash + interior vacuum, all plastics/leather cleaned, light fabric-seat shampoo, cup holders, console, glove box, trunk, A/C vents, windows in and out."),
+        ("Level 3 Exterior + Interior", "$285 / $321", "3.5 hr. Adds carpet + seat shampoo with dry extraction, leather deep clean + conditioning, interior conditioning, steam cleaning, complete disinfect. Small-to-mid / full-size."),
+        ("Level 4 Exterior + Interior", "$425 / $510", "5 hr. Everything in Level 3 plus clay bar, paint decontamination, paint seal or wax. Small-to-mid / full-size."),
+        ("Ceramic Coating — 2-Year", "$550", "2-year ceramic coating, whole-vehicle polishing, full decontamination prep. IGL Coatings Certified Installer."),
+        ("Level 1 Ceramic — 4-Year Professional", "$1,260 / $1,450 / $1,580", "4 hr. Coupe / SUV / Truck. 4-year professional coating with decontamination, one-step paint correction (≈70% defect removal), exterior + tires dressed."),
+        ("Level 2 Ceramic — Everything Coated", "$1,960 / $2,099 / $2,350", "8 hr. Coupe / SUV / Truck. All of Level 1 plus coating on wheels, windows, exterior trim, headlights + taillights."),
+        ("Add-on: Interior Conditioning", "$20", "15 min. Leather + vinyl conditioning. Add to any interior package."),
+        ("Add-on: Paint Sealant", "$80", "25 min. 3-6 months of protection."),
+        ("Add-on: Cabin Air Filter Change", "$100", "30 min. Removal and replacement of cabin air filter."),
+        ("Add-on: Machine Wax", "$120", "35 min. 3-6 months of protection."),
+        ("Add-on: Headlight Restoration", "$125", "1 hr. Wet sand to clear fogginess + ceramic coating application. 1-year guarantee."),
+        ("Add-on: Engine Bay Detail", "$125", "Degrease, wash, and dress the engine bay."),
         ("Custom / Fleet / RV Quote", "Text Angel", "Text (619) 341-0016 with photos for a tailored quote on RVs, boats, motorcycles, lifted trucks, or fleet accounts."),
     ]
     rows_html = "\n".join(
@@ -847,7 +858,7 @@ def render_pricing_page():
     )
     html = f"""{common_head(
         title="Detailing Pricing in Chula Vista | Reflection Detailing",
-        description="Transparent mobile detailing pricing in Chula Vista. Level 1 Detail $80, Level 4 up to $500, Ceramic Coating (IGL) $650, Paint Correction Level 1 $450. No travel fee.",
+        description="Transparent mobile detailing pricing in Chula Vista. Exterior wash $55, full details $215-$510, ceramic coating packages $550-$2,350. No travel fee.",
         canonical_path=slug,
         keywords="detailing prices chula vista, mobile detailing cost san diego, how much does detailing cost"
     )}
@@ -861,7 +872,7 @@ def render_pricing_page():
   <div class="max-w-4xl mx-auto px-4 text-center">
     <p class="uppercase tracking-widest text-accent font-bold text-sm mb-3">Full Price List</p>
     <h1 class="text-3xl md:text-5xl font-black leading-tight mb-5">Mobile Detailing Pricing — Chula Vista & South Bay</h1>
-    <p class="text-lg text-slate-300 max-w-2xl mx-auto">Transparent pricing. No travel fee anywhere in the South Bay. Sedan/coupe base — SUVs +$40, full-size trucks +$60-$80.</p>
+    <p class="text-lg text-slate-300 max-w-2xl mx-auto">Transparent pricing. No travel fee anywhere in the South Bay. Two prices = small-to-mid / full-size vehicle; ceramic packages priced coupe / SUV / truck.</p>
   </div>
 </section>
 
@@ -902,10 +913,10 @@ def render_learn_hub():
         ("how-much-does-detailing-cost-san-diego", "How Much Does a Car Detail Cost in San Diego?",
          "Market pricing breakdown for 2026 — shop vs mobile, services tier by tier, what to watch out for.",
          [
-             ("Current San Diego market (2026)", "Mini details: $89-$149. Full details: $229-$389. Paint correction: $399-$750. Ceramic coating: $299 (2-year) to $1,500 (9-year). Mobile detailers typically price the same as shops — travel fees have become rare."),
+             ("Current San Diego market (2026)", "Quick exterior washes: $50-$90. Full interior + exterior details: $215-$510. Polish/paint enhancement: $250-$400. Ceramic coating packages: $550 (2-year) to $2,350 (4-year, everything coated). Mobile detailers typically price the same as shops — travel fees have become rare."),
              ("What affects the price?", "Vehicle size (SUV/truck/RV upcharges), vehicle condition (pet hair, severe stains, heavy oxidation), package tier, whether paint correction is needed before coating, and installer certification level."),
              ("Red flags in pricing", "A $200 ceramic coating is not a real ceramic coating — it's probably a spray sealant mislabeled. A $99 full detail likely skips decontamination, clay bar, or shampoo. If the price seems too low, ask what's included."),
-             ("Reflection Detailing's positioning", "We price mid-market. Mini Detail $89 (market: $99-$149). Full Detail $279 (market: $229-$389). We undercut the premium players while matching their certification — IGL Coatings and HTL Detailing certified."),
+             ("Reflection Detailing's positioning", "We price mid-market. Level 1 Exterior Wash $55, Level 2 Exterior + Interior $215, Level 4 up to $510. We undercut the premium players while matching their certification — IGL Coatings and HTL Detailing certified."),
          ]),
         ("5-signs-your-car-needs-detailing", "5 Signs Your Car Needs Professional Detailing",
          "If you see any of these, it's time. No guilt — just a quick checklist.",
@@ -913,7 +924,7 @@ def render_learn_hub():
              ("1. Swirl marks visible in sunlight", "Those circular scratches in your paint are from improper washing (usually automatic car washes). They won't buff out with wax — they need paint correction."),
              ("2. Water doesn't bead on the paint", "If water sheets across your paint instead of beading into droplets, your protection has worn off. Time for a refresh — wax, sealant, or ideally a ceramic coating."),
              ("3. The interior smells like something other than 'clean'", "Odor is bacteria. No amount of air freshener will fix it. Hot-water extraction and enzymatic treatment is the only real solution."),
-             ("4. Cloudy or yellow headlights", "Oxidation on the outer plastic cuts light output by up to 80%. That's a safety issue. Headlight restoration takes 45 minutes and costs $99 per pair."),
+             ("4. Cloudy or yellow headlights", "Oxidation on the outer plastic cuts light output by up to 80%. That's a safety issue. Headlight restoration takes about an hour and costs $125 — wet sand plus a ceramic coating with a 1-year guarantee."),
              ("5. The last time you detailed was over a year ago", "Cars collect bonded contaminants over time — brake dust, rail dust, tree sap, bug splatter — that regular washing won't remove. An annual full detail with decontamination keeps paint healthy for the long haul."),
          ]),
         ("ceramic-coating-maintenance-guide", "How to Maintain a Ceramic Coating: 2026 Guide",
@@ -1123,28 +1134,40 @@ def render_llms_txt():
 Chula Vista, Bonita, Eastlake, Otay Ranch, National City, Imperial Beach, Coronado, San Diego, Spring Valley, La Mesa, Lemon Grove.
 
 ## Services & pricing
-Main Services:
-- Level 1 Detail: $80 (1.5 hr) — monthly clients / good-condition vehicles. Vacuum + wipe down, door jams, A/C vents, steering wheel, console. Hand wash, wheels, tire shine.
-- Level 2 Exterior Detail: $150 (1.5 hr) — exterior wash + clay bar + wax/sealant for 3-6 months protection.
-- Level 2 Interior + Exterior Detail: $150 (2 hr) — interior vacuum + wipe down + door jams + seals + A/C vents; exterior contact wash + wheels + windows.
-- Level 3 Interior + Exterior Detail: $250 car / $275 midsize / $300 full-size (2 hr) — Level 2 plus shampoo seats + leather scrub & condition, shampoo carpets, vinyl conditioning.
-- Level 4 Interior + Exterior Detail: $400 midsize / $500 full-size (3 hr) — top tier. Shampoo seats + carpets, deep vacuum, deep interior clean, steam cleaning, trim shine, interior scent, exterior wax/sealant, clay bar.
+Exterior Detailing:
+- Level 1 Exterior Wash: $55 (45 min) — hand wash, towel dry, windows, tire shine.
+- Level 2 Exterior Detail: $169 (2 hr) — hand wash, wheels, wheel barrels, inner fender liners, clay bar, machine wax or paint sealant (your choice), windows, tire shine.
+- Level 3 Exterior Detail: $285 (3 hr) — everything in Level 2 plus polish-buff paint enhancement.
 
-Ceramic Coatings & Paint Correction:
-- Paint Correction Level 1: $450 (3 hr) — polishing only, removes up to half the paint defects.
-- Paint Correction Level 2: $875 (6 hr) — medium-to-heavy compound + refining polish, removes medium-to-heavy defects.
-- Ceramic Coating: $650 (7 hr) — professional IGL Ceramic Coating application.
+Exterior + Interior Detailing:
+- Level 2 Exterior + Interior: $215 (3 hr) — full exterior wash + interior vacuum, all plastics/leather cleaned, light fabric-seat shampoo, cup holders, console, glove box, trunk, A/C vents, windows in and out.
+- Level 3 Exterior + Interior: $285 small-to-mid / $321 full-size (3.5 hr) — adds carpet + seat shampoo with dry extraction, leather deep clean + conditioning, interior conditioning, steam cleaning, complete disinfect.
+- Level 4 Exterior + Interior: $425 small-to-mid / $510 full-size (5 hr) — everything in Level 3 plus clay bar, paint decontamination, paint seal or wax.
 
-Note: excessively dirty cars, bugs, tar, biohazard cleanup may carry extra charges. RVs, boats, motorcycles, lifted trucks, and fleet accounts: text (619) 341-0016 with photos for a custom quote.
+Ceramic Coating (IGL Coatings Certified; paint correction included in Level 1-2 packages):
+- Ceramic Coating 2-Year: $550 — 2-year coating, whole-vehicle polishing, decontamination prep.
+- Level 1 Ceramic (4-Year Professional): $1,260 coupe / $1,450 SUV / $1,580 truck (4 hr) — decontamination, one-step paint correction (~70% defect removal), coating, exterior + tires dressed.
+- Level 2 Ceramic (Everything Coated): $1,960 coupe / $2,099 SUV / $2,350 truck (8 hr) — all of Level 1 plus coating on wheels, windows, exterior trim, headlights + taillights.
+- Twice-monthly at-home maintenance wash program available; ask about the ceramic coating guarantee.
+
+Add-ons:
+- Interior Conditioning (leather + vinyl): $20 (15 min, with any interior package)
+- Paint Sealant: $80 (25 min, 3-6 months protection)
+- Cabin Air Filter Change: $100 (30 min)
+- Machine Wax: $120 (35 min, 3-6 months protection)
+- Headlight Restoration: $125 (1 hr) — wet sand + ceramic coating, 1-year guarantee
+- Engine Bay Detail: $125 — degrease, wash, dress
+
+Note: excessive dirt, pet hair, stains, or biohazard cleanup may carry extra charges (always confirmed before starting). RVs, boats, motorcycles, lifted trucks, and fleet accounts: text (619) 341-0016 with photos for a custom quote.
 
 ## Certifications
 - IGL Coatings Certified Installer (ceramic coating — paint, windows, wheels, trim, leather)
 - HTL Detailing Certified (paint correction)
 
 ## Key pages
-- [Ceramic Coating]({BASE_URL}/ceramic-coating/): IGL Coatings Certified ceramic coating installation — $650
-- [Paint Correction]({BASE_URL}/paint-correction/): HTL Detailing Certified — Level 1 $450, Level 2 $875
-- [Mobile Detailing]({BASE_URL}/mobile-detailing/): All five service levels — $80 to $500
+- [Ceramic Coating]({BASE_URL}/ceramic-coating/): IGL Coatings Certified — 2-Year $550, 4-Year packages $1,260-$2,350
+- [Paint Correction]({BASE_URL}/paint-correction/): HTL Detailing Certified — polish enhancement $285, one-step correction in ceramic packages
+- [Mobile Detailing]({BASE_URL}/mobile-detailing/): All service levels — $55 to $510
 - [Interior Detail]({BASE_URL}/interior-detail/): Level 2, 3, and 4 interior service tiers
 - [Pricing]({BASE_URL}/pricing/): Complete price list
 - [Learn]({BASE_URL}/learn/): Detailing guides
@@ -1166,13 +1189,13 @@ Note: excessively dirty cars, bugs, tar, biohazard cleanup may carry extra charg
 - [How often to detail in San Diego]({BASE_URL}/learn/how-often-should-you-detail-car-san-diego/)
 
 ## Frequently asked
-- How much does mobile detailing cost in Chula Vista? Level 1 Detail starts at $80, Level 4 up to $500, Ceramic Coating $650, Paint Correction Level 1 $450.
+- How much does mobile detailing cost in Chula Vista? Exterior wash $55, full exterior + interior details $215-$510, ceramic coating packages $550-$2,350.
 - Do you come to my location? Yes — 100% mobile, self-contained, no travel fee in South Bay.
 - Are you certified? Yes — IGL Coatings Certified Installer and HTL Detailing Certified.
-- How long does it take? Level 1 1.5 hr, Level 4 3 hr, Ceramic Coating 7 hr.
+- How long does it take? Exterior wash 45 min, Level 4 detail 5 hr, ceramic packages 4-8 hr.
 - What payment methods? Credit/debit, Apple Pay, Google Pay, Zelle, Venmo, Cash App, cash.
 
-Last updated: 2026-04-25
+Last updated: 2026-07-13
 """
     with open(os.path.join(ROOT, "llms.txt"), "w") as f:
         f.write(txt)
