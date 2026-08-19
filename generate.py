@@ -342,7 +342,7 @@ SERVICE_PAGES = [
             ("Satisfaction guarantee", "Every appointment ends with a walk-around inspection. Not happy? We fix it on the spot."),
         ],
         "process": [
-            ("Book Online or Text", "Pick a service + time. No deposit required."),
+            ("Book Online or Text", "Pick a service + time. Angel confirms same day."),
             ("Arrive on Time", "We pull up with the rig, water, and tools."),
             ("Detail in Place", "Full detail performed at your location. Typical times 60 min to full day."),
             ("Walk-Around + Pay", "We inspect the finished vehicle with you before accepting payment."),
