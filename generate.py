@@ -15,6 +15,18 @@ BRAND = "Reflection Detailing"
 PHONE_DISPLAY = "(619) 341-0016"
 PHONE_TEL = "+16193410016"
 BOOKING_URL = "https://app.urable.com/virtual-shop/BpN0zT06GUeMDSgxJJ93"
+# Urable category deep links — verified in browser 2026-08-19.
+# The bare shop URL lands visitors on four unlabeled tiles with no prices;
+# deep-linking drops them straight into the priced list for what they clicked.
+BOOKING_EXT    = BOOKING_URL + "/6zLMwNOARCsomd7vFBaB"   # Exterior Detailing
+BOOKING_EXTINT = BOOKING_URL + "/jbXNz9pcLRlyVrDQ3o4d"   # Exterior - Interior Detailing
+BOOKING_CERAM  = BOOKING_URL + "/jp17CLbVgfLeoPiwYFUh"   # ceramic + paint correction
+BOOKING_BY_SLUG = {
+    "ceramic-coating":  BOOKING_CERAM,
+    "paint-correction": BOOKING_CERAM,
+    "mobile-detailing": BOOKING_EXT,
+    "interior-detail":  BOOKING_EXTINT,
+}
 CITY = "Chula Vista"
 
 # ---------------- Shared fragments ----------------
@@ -226,7 +238,16 @@ def footer_html(depth=1):
   <div class="border-t border-slate-800 py-4 text-center">
     © <script>document.write(new Date().getFullYear())</script> Reflection Detailing LLC. All rights reserved.
   </div>
-</footer>"""
+</footer>
+
+<!-- Sticky mobile contact bar: the only always-visible action on a phone was the
+     Urable link, which is where visitors were being lost. Text is listed first
+     because it is the lowest-commitment way to reach a solo operator mid-job. -->
+<div class="md:hidden fixed bottom-0 inset-x-0 z-50 grid grid-cols-2 border-t border-slate-700 bg-ink/95 backdrop-blur">
+  <a href="sms:{PHONE_TEL}" class="py-4 text-center font-bold text-ink bg-accent">Text a Photo &rarr; Quote</a>
+  <a href="tel:{PHONE_TEL}" class="py-4 text-center font-bold text-white">Call {PHONE_DISPLAY}</a>
+</div>
+<div class="md:hidden h-16" aria-hidden="true"></div>"""
 
 # ---------------- Page data ----------------
 
@@ -328,7 +349,7 @@ SERVICE_PAGES = [
     {
         "slug": "mobile-detailing",
         "name": "Mobile Detailing",
-        "price_from": "$55",
+        "price_from": "$65",
         "h1": "Mobile Auto Detailing — Chula Vista & South San Diego",
         "tagline": "We come to you. Self-contained. No hose, no outlet, no mess.",
         "keywords": "mobile detailing chula vista, mobile car detailing san diego, mobile auto detailing near me, south bay mobile detailing",
@@ -374,7 +395,7 @@ SERVICE_PAGES = [
     {
         "slug": "interior-detail",
         "name": "Interior Detail",
-        "price_from": "$215",
+        "price_from": "$150",
         "h1": "Mobile Interior Car Detail — Chula Vista",
         "tagline": "Levels 2, 3, and 4 cover everything from a quick reset to full deep clean.",
         "keywords": "interior car detailing chula vista, car interior cleaning san diego, upholstery shampoo, interior detail near me",
@@ -661,7 +682,7 @@ def render_service_page(data):
     <h1 class="text-3xl md:text-5xl font-black leading-tight mb-5">{data['h1']}</h1>
     <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-8">{data['intro']}</p>
     <div class="flex flex-col sm:flex-row gap-3 justify-center">
-      <a href="{BOOKING_URL}" target="_blank" rel="noopener" class="bg-accent text-ink font-bold px-6 py-3 rounded-lg hover:opacity-90">Book Now — from {data['price_from']}</a>
+      <a href="{BOOKING_BY_SLUG.get(slug, BOOKING_URL)}" target="_blank" rel="noopener" class="bg-accent text-ink font-bold px-6 py-3 rounded-lg hover:opacity-90">Book Now — from {data['price_from']}</a>
       <a href="tel:{PHONE_TEL}" class="bg-white/10 border border-white/30 text-white font-bold px-6 py-3 rounded-lg hover:bg-white/20">Call {PHONE_DISPLAY}</a>
     </div>
   </div>

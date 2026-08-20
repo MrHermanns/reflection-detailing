@@ -97,7 +97,7 @@
   "areaServed": "Chula Vista, CA",
   "offers": {
     "@type": "AggregateOffer",
-    "lowPrice": "215",
+    "lowPrice": "150",
     "priceCurrency": "USD"
   }
 }
@@ -182,7 +182,7 @@
     <h1 class="text-3xl md:text-5xl font-black leading-tight mb-5">Mobile Interior Car Detail — Chula Vista</h1>
     <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-8">Reflection Detailing's interior service ladders from a quick Level 2 reset all the way up to a deep Level 4 with steam cleaning, seat and carpet shampoo, and an interior scent treatment. Pick the level that matches how much restoration the interior needs — or text us a photo and we'll recommend.</p>
     <div class="flex flex-col sm:flex-row gap-3 justify-center">
-      <a href="https://app.urable.com/virtual-shop/BpN0zT06GUeMDSgxJJ93" target="_blank" rel="noopener" class="bg-accent text-ink font-bold px-6 py-3 rounded-lg hover:opacity-90">Book Now — from $215</a>
+      <a href="https://app.urable.com/virtual-shop/BpN0zT06GUeMDSgxJJ93/jbXNz9pcLRlyVrDQ3o4d" target="_blank" rel="noopener" class="bg-accent text-ink font-bold px-6 py-3 rounded-lg hover:opacity-90">Book Now — from $150</a>
       <a href="tel:+16193410016" class="bg-white/10 border border-white/30 text-white font-bold px-6 py-3 rounded-lg hover:bg-white/20">Call (619) 341-0016</a>
     </div>
   </div>
@@ -307,6 +307,15 @@
     © <script>document.write(new Date().getFullYear())</script> Reflection Detailing LLC. All rights reserved.
   </div>
 </footer>
+
+<!-- Sticky mobile contact bar: the only always-visible action on a phone was the
+     Urable link, which is where visitors were being lost. Text is listed first
+     because it is the lowest-commitment way to reach a solo operator mid-job. -->
+<div class="md:hidden fixed bottom-0 inset-x-0 z-50 grid grid-cols-2 border-t border-slate-700 bg-ink/95 backdrop-blur">
+  <a href="sms:+16193410016" class="py-4 text-center font-bold text-ink bg-accent">Text a Photo &rarr; Quote</a>
+  <a href="tel:+16193410016" class="py-4 text-center font-bold text-white">Call (619) 341-0016</a>
+</div>
+<div class="md:hidden h-16" aria-hidden="true"></div>
 
 </body>
 </html>
